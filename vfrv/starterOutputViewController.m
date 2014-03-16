@@ -31,17 +31,6 @@
    MySingletonClass *global = [MySingletonClass sharedSingleton];
 
  //imported global variables from singleton
-/*  global.quantityN;
-    global.diameterN;
-    global.thicknessN;
-    global.hydrationN;
-    global.prefermentAmountN;
-    global.prefermentHydrationN;
-    global.saltN;
-    global.oilN;
-    global.sugarN;
-    global.wasteN;
-    */
     
     float DoughWeightN;
     float BallWeightN;
@@ -51,7 +40,11 @@
     float WaterN;
     float RemainingFlourN;
     float InitFlourN;
+    NSString *unitsS;
+    NSString *units2S;
+    NSString *units3S;
 
+    
     BallWeightN = 3.1415 * pow((global.diameterN/2),2) * global.thicknessN * 28.3495;
     DoughWeightN = BallWeightN * (1 + global.wasteN/100) * global.quantityN;
   
@@ -69,17 +62,50 @@
     RemainingFlourN = totalFlour * 1/3;
     InitFlourN = totalFlour * 2/3;
     
-    lDoughWeight.text = [NSString stringWithFormat:@"%.02f",DoughWeightN];
-    lBallWeight.text = [NSString stringWithFormat:@"%.02f",BallWeightN];
-    lSugar.text = [NSString stringWithFormat:@"%.02f",SugarN];
-    lOil.text = [NSString stringWithFormat:@"%.02f",OilN];
-    lSalt.text = [NSString stringWithFormat:@"%.02f",SaltN];
-    lPreferment.text = [NSString stringWithFormat:@"%.02f",totalPreferment];
-    lWater.text = [NSString stringWithFormat:@"%.02f",WaterN];
-    lRemainingFlour.text = [NSString stringWithFormat:@"%.02f",RemainingFlourN];
-    lInitFlour.text = [NSString stringWithFormat:@"%.02f",InitFlourN];
-    
+    if( global.prefWeight == 0 ) {
+        unitsS= @" g";
+        units2S= @" g";
+        units3S= @" g";
+    } else if (global.prefWeight == 1) {
+        unitsS= @" oz";
+        units2S= @" oz";
+        units3S= @" oz";
+    } else {
+        unitsS= @" cu";
+        units2S= @" tsp";
+        units3S= @" Tbs";
+
     }
+    
+    lDoughWeight.text = [NSString stringWithFormat:@"%.02f",DoughWeightN];
+    lDoughWeight.text = [lDoughWeight.text stringByAppendingString:unitsS];
+    
+    lBallWeight.text = [NSString stringWithFormat:@"%.02f",BallWeightN];
+    lBallWeight.text = [lBallWeight.text stringByAppendingString:unitsS];
+
+    lSugar.text = [NSString stringWithFormat:@"%.02f",SugarN];
+    lSugar.text = [lSugar.text stringByAppendingString:units3S];
+
+    lOil.text = [NSString stringWithFormat:@"%.02f",OilN];
+    lOil.text = [lOil.text stringByAppendingString:units3S];
+    
+    lSalt.text = [NSString stringWithFormat:@"%.02f",SaltN];
+    lSalt.text = [lSalt.text stringByAppendingString:units3S];
+    
+    lPreferment.text = [NSString stringWithFormat:@"%.02f",totalPreferment];
+    lPreferment.text = [lPreferment.text stringByAppendingString:units3S];
+
+    lWater.text = [NSString stringWithFormat:@"%.02f",WaterN];
+    lWater.text = [lWater.text stringByAppendingString:unitsS];
+    
+    lRemainingFlour.text = [NSString stringWithFormat:@"%.02f",RemainingFlourN];
+    lRemainingFlour.text = [lRemainingFlour.text stringByAppendingString:unitsS];
+    
+    lInitFlour.text = [NSString stringWithFormat:@"%.02f",InitFlourN];
+    lInitFlour.text = [lInitFlour.text stringByAppendingString:units3S];
+    
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

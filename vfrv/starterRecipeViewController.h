@@ -19,6 +19,7 @@
     IBOutlet UITextField *oil;
     IBOutlet UITextField *sugar;
     IBOutlet UITextField *waste;
+    IBOutlet UILabel *lDistance;
 }
 
 

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface settingsViewController : UITableViewController
+@interface settingsViewController : UITableViewController<UIPickerViewDataSource, UIPickerViewDelegate> {
 
+    IBOutlet UIPickerView *weightPicker;
+    IBOutlet UIPickerView *tempPicker;
+    IBOutlet UIPickerView *distancePicker;
+    
+    NSArray *weights;
+    NSArray *distances;
+    NSArray *temps;
+}
 @end

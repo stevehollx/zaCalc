@@ -13,8 +13,18 @@
 
 -(IBAction)viewDidLoad {
 
+    NSString *distanceS = @"(inches)";
+    
     MySingletonClass *global = [MySingletonClass sharedSingleton];
     prefermentAmount.text = [NSString stringWithFormat:@"%.02f",global.prefermentAmountN];
+    if( global.prefDistance == 0) {
+        distanceS = @"(inches)";
+    }
+    else {
+        distanceS = @"(cm)";
+    }
+    
+    lDistance.text = distanceS;
 }
 
 -(IBAction)calculate {

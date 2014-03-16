@@ -20,8 +20,10 @@
     float oilN;
     float sugarN;
     float wasteN;
-    
-     NSArray *_volume;
+    int prefTemp;
+    int prefDistance;
+    int prefWeight;
+    NSArray *_volume; //huh?
 }
 
 
@@ -35,6 +37,9 @@
 @property(nonatomic, assign) float  oilN;
 @property(nonatomic, assign) float  sugarN;
 @property(nonatomic, assign) float  wasteN;
+@property(nonatomic, assign) int  prefTemp;
+@property(nonatomic, assign) int  prefDistance;
+@property(nonatomic, assign) int  prefWeight;
 
 + (MySingletonClass *)sharedSingleton;
 

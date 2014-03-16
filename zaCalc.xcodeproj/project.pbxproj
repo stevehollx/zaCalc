@@ -26,6 +26,7 @@
 		FF14160E18A09A4400FE0E02 /* StarterProofViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14160D18A09A4400FE0E02 /* StarterProofViewController.m */; };
 		FF14161318A09AEA00FE0E02 /* StarterProofAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14161218A09AEA00FE0E02 /* StarterProofAppDelegate.m */; };
 		FF3E75CF18A1B03600CA92DE /* MySingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3E75CE18A1B03600CA92DE /* MySingletonClass.m */; };
+		FF50121318D5F72F002C114A /* StarterRecipeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50121218D5F72F002C114A /* StarterRecipeInfoViewController.m */; };
 		FF65ED5E18D5330200591398 /* lab-beaker-icon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */; };
 		FF65ED6818D534B500591398 /* list-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6718D534B500591398 /* list-icon2.png */; };
 		FF65ED7A18D537CF00591398 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6A18D537CF00591398 /* AppIcon29x29.png */; };
@@ -48,7 +49,6 @@
 		FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */; };
 		FFA6B5EE18A16E4A00A85376 /* starterOutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */; };
 		FFA6B5F718A18BB000A85376 /* StarterRecipeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5F618A18BB000A85376 /* StarterRecipeAppDelegate.m */; };
-		FFE95AF218D53FB400F50617 /* info.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE95AF118D53FB400F50617 /* info.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +90,8 @@
 		FF14161218A09AEA00FE0E02 /* StarterProofAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterProofAppDelegate.m; sourceTree = "<group>"; };
 		FF3E75CD18A1B03600CA92DE /* MySingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingletonClass.h; sourceTree = "<group>"; };
 		FF3E75CE18A1B03600CA92DE /* MySingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingletonClass.m; sourceTree = "<group>"; };
+		FF50121118D5F72F002C114A /* StarterRecipeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarterRecipeInfoViewController.h; path = ../StarterRecipeInfoViewController.h; sourceTree = "<group>"; };
+		FF50121218D5F72F002C114A /* StarterRecipeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarterRecipeInfoViewController.m; path = ../StarterRecipeInfoViewController.m; sourceTree = "<group>"; };
 		FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lab-beaker-icon copy.png"; sourceTree = "<group>"; };
 		FF65ED6718D534B500591398 /* list-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon2.png"; sourceTree = "<group>"; };
 		FF65ED6A18D537CF00591398 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
@@ -116,8 +118,6 @@
 		FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starterOutputViewController.m; sourceTree = "<group>"; };
 		FFA6B5F518A18BB000A85376 /* StarterRecipeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterRecipeAppDelegate.h; sourceTree = "<group>"; };
 		FFA6B5F618A18BB000A85376 /* StarterRecipeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterRecipeAppDelegate.m; sourceTree = "<group>"; };
-		FFE95AF018D53FB400F50617 /* info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = info.h; sourceTree = "<group>"; };
-		FFE95AF118D53FB400F50617 /* info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = info.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,8 +235,8 @@
 		FF65ED5C18D526F000591398 /* Info pages */ = {
 			isa = PBXGroup;
 			children = (
-				FFE95AF018D53FB400F50617 /* info.h */,
-				FFE95AF118D53FB400F50617 /* info.m */,
+				FF50121118D5F72F002C114A /* StarterRecipeInfoViewController.h */,
+				FF50121218D5F72F002C114A /* StarterRecipeInfoViewController.m */,
 			);
 			name = "Info pages";
 			sourceTree = "<group>";
@@ -454,7 +454,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1415E218A097E200FE0E02 /* AppDelegate.m in Sources */,
-				FFE95AF218D53FB400F50617 /* info.m in Sources */,
 				FF1415EB18A097E200FE0E02 /* MasterViewController.m in Sources */,
 				FF14161318A09AEA00FE0E02 /* StarterProofAppDelegate.m in Sources */,
 				FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */,
@@ -465,6 +464,7 @@
 				FF3E75CF18A1B03600CA92DE /* MySingletonClass.m in Sources */,
 				FF979DA618A7C22600566EE7 /* settingsViewController.m in Sources */,
 				FF1415EE18A097E200FE0E02 /* DetailViewController.m in Sources */,
+				FF50121318D5F72F002C114A /* StarterRecipeInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

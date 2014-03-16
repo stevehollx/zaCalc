@@ -20,5 +20,6 @@
     IBOutlet UILabel *lWater;
     IBOutlet UILabel *lRemainingFlour;
     IBOutlet UILabel *lInitFlour;
+    IBOutlet UILabel *lUnits;
 }
 @end

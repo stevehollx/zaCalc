@@ -7,6 +7,7 @@
 //
 
 #import "settingsViewController.h"
+#import "MySingletonClass.h"
 
 @interface settingsViewController ()
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
 
+    weights = [[NSArray alloc] initWithObjects:@"Grams",@"Ounces",@"Cups & Tsp", nil];
+    distances = [[NSArray alloc] initWithObjects:@"Inches",@"Centimeters", nil];
+    temps = [[NSArray alloc] initWithObjects:@"Farenheit",@"Celsius", nil];
+   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -40,29 +45,62 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+//picker stuff
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    // Return the number of sections.
+    //One column
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    //set number of rows
+    if ([pickerView tag] == 0) {
+        return 2;
+    }
+    else if([pickerView tag] == 1)
+    {
+        return 2;
+    }
+    else if([pickerView tag] == 2)
+    {
+        return 3;
+    } else {
+        return 0;
+    }
     return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    // Return the number of rows in the section.
+    //set item per row
+    if ([pickerView tag] == 0) {
+            return [distances objectAtIndex:row];
+    }
+    else if([pickerView tag] == 1)
+    {
+            return [temps objectAtIndex:row];
+    }
+    else if([pickerView tag] == 2)
+    {
+            return [weights objectAtIndex:row];
+    } else {
+        return 0;
+    }
     return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    MySingletonClass *global = [MySingletonClass sharedSingleton];
+    global.prefDistance = [pickerView selectedRowInComponent:0];
+    global.prefTemp = [pickerView selectedRowInComponent:0];
+    global.prefWeight = [pickerView selectedRowInComponent:0];
+
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

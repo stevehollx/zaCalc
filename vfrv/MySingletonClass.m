@@ -26,7 +26,9 @@ float saltN;
 float oilN;
 float sugarN;
 float wasteN;
-
+int prefTemp;
+int prefDistance;
+int prefWeight;
 
 - (id)init
 {
@@ -43,6 +45,9 @@ float wasteN;
         oilN=0;
         sugarN=0;
         wasteN=1.2;
+        prefTemp=0;
+        prefDistance=0;
+        prefWeight=0;
     }
     return self;
     
@@ -74,5 +79,8 @@ float wasteN;
 @synthesize  oilN;
 @synthesize  sugarN;
 @synthesize  wasteN;
+@synthesize prefTemp;
+@synthesize prefDistance;
+@synthesize prefWeight;
 
 @end
