@@ -744,6 +744,12 @@ Coming in the next version:
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(F)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-9n-6ej">
+                                <rect key="frame" x="287" y="113" width="19" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -754,6 +760,7 @@ Coming in the next version:
                     <connections>
                         <outlet property="lTotalTime" destination="gPO-d3-h0q" id="Igz-qF-GR8"/>
                         <outlet property="starterPercent" destination="QiO-zJ-Ng8" id="4JE-ay-Gwm"/>
+                        <outlet property="tempUnit" destination="Keu-9n-6ej" id="CqC-zo-su2"/>
                         <outlet property="tfTemp1" destination="ilW-pp-18Q" id="qFS-4a-3Vg"/>
                         <outlet property="tfTemp2" destination="yGJ-I5-Zc3" id="eY0-Ec-BUH"/>
                         <outlet property="tfTemp3" destination="nfd-ee-lB2" id="esI-BN-Wj6"/>

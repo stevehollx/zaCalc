@@ -54,7 +54,10 @@
 	global.sugarN = [sugarS floatValue];
 	global.wasteN = [wasteS floatValue];
     
-    
+    if( global.prefDistance == 1) {
+        global.diameterN = global.diameterN * 0.39370;
+
+    }
 }
 
 -(IBAction)closeKeyboard {

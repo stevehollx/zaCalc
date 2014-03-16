@@ -5,6 +5,9 @@
 
 @implementation StarterProofViewController
 -(IBAction)calculate {
+    
+    MySingletonClass *global = [MySingletonClass sharedSingleton];
+    
 	//Here we are creating two strings and assigning the value of the tfTimes to the strings.
 	NSString *sTime1 = tfTime1.text;
 	NSString *sTime2 = tfTime2.text;
@@ -46,6 +49,17 @@
 	fTemp4 = [sTemp4 floatValue];
 	fTemp5 = [sTemp5 floatValue];
     
+    
+    //conver to F if needed
+    if( global.prefTemp == 1) {
+        fTemp1 = fTemp1 * 9/5 + 32;
+        fTemp2 = fTemp2 * 9/5 + 32;
+        fTemp3 = fTemp3 * 9/5 + 32;
+        fTemp4 = fTemp4 * 9/5 + 32;
+        fTemp5 = fTemp5 * 9/5 + 32;
+    }
+    
+    
 	//Now we are going to add the two integers and assign the value to the output integer.
 	fOutput = fTime1 + fTime2 + fTime3 + fTime4 + fTime5;
     starterPercentOutput =89.4/(pow(2,((fTime1/((((((((((-0.0000336713*(pow(fTemp1,4)))+(0.0105207916*(pow(fTemp1,3))))-(1.2495985607*(pow(fTemp1,2))))+(67.0024722564*fTemp1))-1374.6540546564)*log((.01)))+ (((((-0.000003773*(pow(fTemp1,4))) +( 0.0011788625*(pow(fTemp1,3)))) -( 0.1400139318*(pow(fTemp1,2)))) +( 7.5072379375*fTemp1)) - 154.0188143761))-(((((((-0.0000336713*(pow(fTemp1,4)))+(0.0105207916*(pow(fTemp1,3))))-(1.2495985607*(pow(fTemp1,2))))+(67.0024722564*fTemp1))-1374.6540546564)*log((.4)))+ (((((-0.000003773*(pow(fTemp1,4))) +( 0.0011788625*(pow(fTemp1,3)))) -( 0.1400139318*(pow(fTemp1,2)))) +( 7.5072379375*fTemp1)) - 154.0188143761)))/(log((40))/log(2))))
@@ -65,7 +79,6 @@
     starterPercent.text = [NSString stringWithFormat:@"%.02f",starterPercentOutput];
     starterPercent.text = [starterPercent.text stringByAppendingString:@"%"];
     
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
     global.prefermentAmountN = starterPercentOutput;
 }
 -(IBAction)closeKeyboard {
@@ -88,9 +101,18 @@
 	
 	// Release any cached data, images, etc that aren't in use.
 }
--(void)viewDidUnload {
+-(void)viewDidLoad {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+    MySingletonClass *global = [MySingletonClass sharedSingleton];
+
+    tempUnit.text = @"(F)";
+    
+    //conver to F if needed
+    if( global.prefTemp == 1) {
+        tempUnit.text = @"(C)";
+    }
+    
 }
 -(void)dealloc {
 	//This release the decleration we made in the header file

@@ -94,9 +94,18 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     MySingletonClass *global = [MySingletonClass sharedSingleton];
-    global.prefDistance = [pickerView selectedRowInComponent:0];
-    global.prefTemp = [pickerView selectedRowInComponent:0];
-    global.prefWeight = [pickerView selectedRowInComponent:0];
+    
+    if ([pickerView tag] == 0) {
+        global.prefDistance = [pickerView selectedRowInComponent:0];
+    }
+    else if([pickerView tag] == 1)
+    {
+        global.prefTemp = [pickerView selectedRowInComponent:0];
+    }
+    else if([pickerView tag] == 2)
+    {
+        global.prefWeight = [pickerView selectedRowInComponent:0];
+    }
 
 }
 

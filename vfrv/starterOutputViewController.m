@@ -43,6 +43,7 @@
     NSString *unitsS;
     NSString *units2S;
     NSString *units3S;
+    NSString *units4S;
 
     
     BallWeightN = 3.1415 * pow((global.diameterN/2),2) * global.thicknessN * 28.3495;
@@ -66,22 +67,45 @@
         unitsS= @" g";
         units2S= @" g";
         units3S= @" g";
+        units4S= @" g";
     } else if (global.prefWeight == 1) {
         unitsS= @" oz";
         units2S= @" oz";
         units3S= @" oz";
-    } else {
+        units4S= @" oz";
+        DoughWeightN = DoughWeightN * .035274;
+        BallWeightN = BallWeightN * .035274;
+        SugarN = SugarN * .035274;
+        OilN = OilN * .035274;
+        SaltN = SaltN * .035274;
+        totalPreferment = totalPreferment * .035274;
+        WaterN = WaterN * .035274;
+        RemainingFlourN = RemainingFlourN * .035274;
+        InitFlourN = InitFlourN * .035274;
+        
+    } else { //convert to volumes
         unitsS= @" cu";
         units2S= @" tsp";
         units3S= @" Tbs";
+        units4S= @" oz";
+        DoughWeightN = DoughWeightN * .035274;
+        BallWeightN = BallWeightN * .035274;
+        totalPreferment = totalPreferment / 17;
+
+        OilN = OilN / 15;
+        WaterN = WaterN * .00423;
+        SaltN = SaltN * .18;
+        RemainingFlourN = RemainingFlourN / 125;
+        InitFlourN = InitFlourN / 125;
+        SugarN = SugarN * 0.0796812749;
 
     }
     
     lDoughWeight.text = [NSString stringWithFormat:@"%.02f",DoughWeightN];
-    lDoughWeight.text = [lDoughWeight.text stringByAppendingString:unitsS];
+    lDoughWeight.text = [lDoughWeight.text stringByAppendingString:units4S];
     
     lBallWeight.text = [NSString stringWithFormat:@"%.02f",BallWeightN];
-    lBallWeight.text = [lBallWeight.text stringByAppendingString:unitsS];
+    lBallWeight.text = [lBallWeight.text stringByAppendingString:units4S];
 
     lSugar.text = [NSString stringWithFormat:@"%.02f",SugarN];
     lSugar.text = [lSugar.text stringByAppendingString:units3S];
@@ -90,7 +114,7 @@
     lOil.text = [lOil.text stringByAppendingString:units3S];
     
     lSalt.text = [NSString stringWithFormat:@"%.02f",SaltN];
-    lSalt.text = [lSalt.text stringByAppendingString:units3S];
+    lSalt.text = [lSalt.text stringByAppendingString:units2S];
     
     lPreferment.text = [NSString stringWithFormat:@"%.02f",totalPreferment];
     lPreferment.text = [lPreferment.text stringByAppendingString:units3S];
@@ -102,7 +126,7 @@
     lRemainingFlour.text = [lRemainingFlour.text stringByAppendingString:unitsS];
     
     lInitFlour.text = [NSString stringWithFormat:@"%.02f",InitFlourN];
-    lInitFlour.text = [lInitFlour.text stringByAppendingString:units3S];
+    lInitFlour.text = [lInitFlour.text stringByAppendingString:unitsS];
     
     
 }

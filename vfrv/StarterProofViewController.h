@@ -19,6 +19,7 @@
     IBOutlet UITextField *tfTemp5;
 	//Here we are declaring the outlet for the label
 	IBOutlet UILabel *starterPercent;
+    IBOutlet UILabel *tempUnit;
 }
 
 
