@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF1415CD18A097E200FE0E02"
-               BuildableName = "vfrv.app"
-               BlueprintName = "vfrv"
-               ReferencedContainer = "container:vfrv.xcodeproj">
+               BuildableName = "zaCalc.app"
+               BlueprintName = "zaCalc"
+               ReferencedContainer = "container:zaCalc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF1415F418A097E200FE0E02"
-               BuildableName = "vfrvTests.xctest"
-               BlueprintName = "vfrvTests"
-               ReferencedContainer = "container:vfrv.xcodeproj">
+               BuildableName = "zaCalcTests.xctest"
+               BlueprintName = "zaCalcTests"
+               ReferencedContainer = "container:zaCalc.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF1415CD18A097E200FE0E02"
-            BuildableName = "vfrv.app"
-            BlueprintName = "vfrv"
-            ReferencedContainer = "container:vfrv.xcodeproj">
+            BuildableName = "zaCalc.app"
+            BlueprintName = "zaCalc"
+            ReferencedContainer = "container:zaCalc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF1415CD18A097E200FE0E02"
-            BuildableName = "vfrv.app"
-            BlueprintName = "vfrv"
-            ReferencedContainer = "container:vfrv.xcodeproj">
+            BuildableName = "zaCalc.app"
+            BlueprintName = "zaCalc"
+            ReferencedContainer = "container:zaCalc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF1415CD18A097E200FE0E02"
-            BuildableName = "vfrv.app"
-            BlueprintName = "vfrv"
-            ReferencedContainer = "container:vfrv.xcodeproj">
+            BuildableName = "zaCalc.app"
+            BlueprintName = "zaCalc"
+            ReferencedContainer = "container:zaCalc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

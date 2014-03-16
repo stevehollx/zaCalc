@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:vfrv.xcodeproj">
+      location = "self:zaCalc.xcodeproj">
    </FileRef>
 </Workspace>

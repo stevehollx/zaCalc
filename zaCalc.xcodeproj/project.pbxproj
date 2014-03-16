@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF1415D218A097E200FE0E02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415D118A097E200FE0E02 /* Foundation.framework */; };
+		FF1415D418A097E200FE0E02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415D318A097E200FE0E02 /* CoreGraphics.framework */; };
+		FF1415D618A097E200FE0E02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415D518A097E200FE0E02 /* UIKit.framework */; };
+		FF1415DC18A097E200FE0E02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF1415DA18A097E200FE0E02 /* InfoPlist.strings */; };
+		FF1415DE18A097E200FE0E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415DD18A097E200FE0E02 /* main.m */; };
+		FF1415E218A097E200FE0E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415E118A097E200FE0E02 /* AppDelegate.m */; };
+		FF1415E518A097E200FE0E02 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1415E318A097E200FE0E02 /* Main_iPhone.storyboard */; };
+		FF1415E818A097E200FE0E02 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */; };
+		FF1415EB18A097E200FE0E02 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415EA18A097E200FE0E02 /* MasterViewController.m */; };
+		FF1415EE18A097E200FE0E02 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415ED18A097E200FE0E02 /* DetailViewController.m */; };
+		FF1415F018A097E200FE0E02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1415EF18A097E200FE0E02 /* Images.xcassets */; };
+		FF1415F718A097E200FE0E02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415F618A097E200FE0E02 /* XCTest.framework */; };
+		FF1415F818A097E200FE0E02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415D118A097E200FE0E02 /* Foundation.framework */; };
+		FF1415F918A097E200FE0E02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1415D518A097E200FE0E02 /* UIKit.framework */; };
+		FF14160118A097E200FE0E02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF1415FF18A097E200FE0E02 /* InfoPlist.strings */; };
+		FF14160318A097E200FE0E02 /* zaCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14160218A097E200FE0E02 /* zaCalcTests.m */; };
+		FF14160E18A09A4400FE0E02 /* StarterProofViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14160D18A09A4400FE0E02 /* StarterProofViewController.m */; };
+		FF14161318A09AEA00FE0E02 /* StarterProofAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14161218A09AEA00FE0E02 /* StarterProofAppDelegate.m */; };
+		FF3E75CF18A1B03600CA92DE /* MySingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3E75CE18A1B03600CA92DE /* MySingletonClass.m */; };
+		FF65ED5E18D5330200591398 /* lab-beaker-icon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */; };
+		FF65ED6818D534B500591398 /* list-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6718D534B500591398 /* list-icon2.png */; };
+		FF65ED7A18D537CF00591398 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6A18D537CF00591398 /* AppIcon29x29.png */; };
+		FF65ED7B18D537CF00591398 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6B18D537CF00591398 /* AppIcon29x29@2x.png */; };
+		FF65ED7C18D537CF00591398 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6C18D537CF00591398 /* AppIcon40x40.png */; };
+		FF65ED7D18D537CF00591398 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6D18D537CF00591398 /* AppIcon40x40@2x.png */; };
+		FF65ED7E18D537CF00591398 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6E18D537CF00591398 /* AppIcon50x50.png */; };
+		FF65ED7F18D537CF00591398 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6F18D537CF00591398 /* AppIcon50x50@2x.png */; };
+		FF65ED8018D537CF00591398 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7018D537CF00591398 /* AppIcon57x57.png */; };
+		FF65ED8118D537CF00591398 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7118D537CF00591398 /* AppIcon57x57@2x.png */; };
+		FF65ED8218D537CF00591398 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7218D537CF00591398 /* AppIcon60x60.png */; };
+		FF65ED8318D537CF00591398 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7318D537CF00591398 /* AppIcon60x60@2x.png */; };
+		FF65ED8418D537CF00591398 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7418D537CF00591398 /* AppIcon72x72.png */; };
+		FF65ED8518D537CF00591398 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7518D537CF00591398 /* AppIcon72x72@2x.png */; };
+		FF65ED8618D537CF00591398 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7618D537CF00591398 /* AppIcon76x76.png */; };
+		FF65ED8718D537CF00591398 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7718D537CF00591398 /* AppIcon76x76@2x.png */; };
+		FF65ED8818D537CF00591398 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7818D537CF00591398 /* iTunesArtwork.png */; };
+		FF65ED8918D537CF00591398 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */; };
+		FF979DA618A7C22600566EE7 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF979DA518A7C22600566EE7 /* settingsViewController.m */; };
+		FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */; };
+		FFA6B5EE18A16E4A00A85376 /* starterOutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */; };
+		FFA6B5F718A18BB000A85376 /* StarterRecipeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5F618A18BB000A85376 /* StarterRecipeAppDelegate.m */; };
+		FFE95AF218D53FB400F50617 /* info.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE95AF118D53FB400F50617 /* info.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF1415FA18A097E200FE0E02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF1415C618A097E200FE0E02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF1415CD18A097E200FE0E02;
+			remoteInfo = vfrv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF1415CE18A097E200FE0E02 /* zaCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zaCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1415D118A097E200FE0E02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF1415D318A097E200FE0E02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF1415D518A097E200FE0E02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FF1415D918A097E200FE0E02 /* zaCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zaCalc-Info.plist"; sourceTree = "<group>"; };
+		FF1415DB18A097E200FE0E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF1415DD18A097E200FE0E02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF1415DF18A097E200FE0E02 /* zaCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zaCalc-Prefix.pch"; sourceTree = "<group>"; };
+		FF1415E018A097E200FE0E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FF1415E118A097E200FE0E02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FF1415E418A097E200FE0E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		FF1415E718A097E200FE0E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		FF1415E918A097E200FE0E02 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		FF1415EA18A097E200FE0E02 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FF1415EC18A097E200FE0E02 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FF1415ED18A097E200FE0E02 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FF1415EF18A097E200FE0E02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF1415F518A097E200FE0E02 /* zaCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1415F618A097E200FE0E02 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FF1415FE18A097E200FE0E02 /* zaCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zaCalcTests-Info.plist"; sourceTree = "<group>"; };
+		FF14160018A097E200FE0E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF14160218A097E200FE0E02 /* zaCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zaCalcTests.m; sourceTree = "<group>"; };
+		FF14160C18A09A4400FE0E02 /* StarterProofViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterProofViewController.h; sourceTree = "<group>"; };
+		FF14160D18A09A4400FE0E02 /* StarterProofViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterProofViewController.m; sourceTree = "<group>"; };
+		FF14161118A09AEA00FE0E02 /* StarterProofAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterProofAppDelegate.h; sourceTree = "<group>"; };
+		FF14161218A09AEA00FE0E02 /* StarterProofAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterProofAppDelegate.m; sourceTree = "<group>"; };
+		FF3E75CD18A1B03600CA92DE /* MySingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingletonClass.h; sourceTree = "<group>"; };
+		FF3E75CE18A1B03600CA92DE /* MySingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingletonClass.m; sourceTree = "<group>"; };
+		FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lab-beaker-icon copy.png"; sourceTree = "<group>"; };
+		FF65ED6718D534B500591398 /* list-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon2.png"; sourceTree = "<group>"; };
+		FF65ED6A18D537CF00591398 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		FF65ED6B18D537CF00591398 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		FF65ED6C18D537CF00591398 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		FF65ED6D18D537CF00591398 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		FF65ED6E18D537CF00591398 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		FF65ED6F18D537CF00591398 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		FF65ED7018D537CF00591398 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		FF65ED7118D537CF00591398 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		FF65ED7218D537CF00591398 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		FF65ED7318D537CF00591398 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		FF65ED7418D537CF00591398 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		FF65ED7518D537CF00591398 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		FF65ED7618D537CF00591398 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		FF65ED7718D537CF00591398 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		FF65ED7818D537CF00591398 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		FF979DA418A7C22600566EE7 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		FF979DA518A7C22600566EE7 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		FFA6B5E918A14F3D00A85376 /* starterRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starterRecipeViewController.h; sourceTree = "<group>"; };
+		FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starterRecipeViewController.m; sourceTree = "<group>"; };
+		FFA6B5EC18A16E4A00A85376 /* starterOutputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starterOutputViewController.h; sourceTree = "<group>"; };
+		FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starterOutputViewController.m; sourceTree = "<group>"; };
+		FFA6B5F518A18BB000A85376 /* StarterRecipeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarterRecipeAppDelegate.h; sourceTree = "<group>"; };
+		FFA6B5F618A18BB000A85376 /* StarterRecipeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarterRecipeAppDelegate.m; sourceTree = "<group>"; };
+		FFE95AF018D53FB400F50617 /* info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = info.h; sourceTree = "<group>"; };
+		FFE95AF118D53FB400F50617 /* info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = info.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF1415CB18A097E200FE0E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1415D418A097E200FE0E02 /* CoreGraphics.framework in Frameworks */,
+				FF1415D618A097E200FE0E02 /* UIKit.framework in Frameworks */,
+				FF1415D218A097E200FE0E02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1415F218A097E200FE0E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1415F718A097E200FE0E02 /* XCTest.framework in Frameworks */,
+				FF1415F918A097E200FE0E02 /* UIKit.framework in Frameworks */,
+				FF1415F818A097E200FE0E02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF1415C518A097E200FE0E02 = {
+			isa = PBXGroup;
+			children = (
+				FF1415D718A097E200FE0E02 /* ZaCalc */,
+				FF1415FC18A097E200FE0E02 /* zaCalcTests */,
+				FF1415D018A097E200FE0E02 /* Frameworks */,
+				FF1415CF18A097E200FE0E02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF1415CF18A097E200FE0E02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415CE18A097E200FE0E02 /* zaCalc.app */,
+				FF1415F518A097E200FE0E02 /* zaCalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF1415D018A097E200FE0E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415D118A097E200FE0E02 /* Foundation.framework */,
+				FF1415D318A097E200FE0E02 /* CoreGraphics.framework */,
+				FF1415D518A097E200FE0E02 /* UIKit.framework */,
+				FF1415F618A097E200FE0E02 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF1415D718A097E200FE0E02 /* ZaCalc */ = {
+			isa = PBXGroup;
+			children = (
+				FF979DA718A7C26000566EE7 /* settings */,
+				FF996B5018A45BD800DA63C8 /* Images */,
+				FF3E75CD18A1B03600CA92DE /* MySingletonClass.h */,
+				FF3E75CE18A1B03600CA92DE /* MySingletonClass.m */,
+				FFA6B5F118A1884F00A85376 /* Main Menu */,
+				FF14161418A09D9800FE0E02 /* starterCalc */,
+				FFA6B5F218A18AC600A85376 /* Storyboards */,
+				FF1415EF18A097E200FE0E02 /* Images.xcassets */,
+				FF1415D818A097E200FE0E02 /* Supporting Files */,
+			);
+			name = ZaCalc;
+			path = vfrv;
+			sourceTree = "<group>";
+		};
+		FF1415D818A097E200FE0E02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415D918A097E200FE0E02 /* zaCalc-Info.plist */,
+				FF1415DA18A097E200FE0E02 /* InfoPlist.strings */,
+				FF1415DD18A097E200FE0E02 /* main.m */,
+				FF1415DF18A097E200FE0E02 /* zaCalc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF1415FC18A097E200FE0E02 /* zaCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF14160218A097E200FE0E02 /* zaCalcTests.m */,
+				FF1415FD18A097E200FE0E02 /* Supporting Files */,
+			);
+			name = zaCalcTests;
+			path = vfrvTests;
+			sourceTree = "<group>";
+		};
+		FF1415FD18A097E200FE0E02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415FE18A097E200FE0E02 /* zaCalcTests-Info.plist */,
+				FF1415FF18A097E200FE0E02 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF14161418A09D9800FE0E02 /* starterCalc */ = {
+			isa = PBXGroup;
+			children = (
+				FF65ED5C18D526F000591398 /* Info pages */,
+				FFA6B5F018A187D000A85376 /* StarterProof */,
+				FFA6B5F318A18B6800A85376 /* StarterRecipe */,
+				FFA6B5F418A18B7200A85376 /* starterOutput */,
+			);
+			name = starterCalc;
+			sourceTree = "<group>";
+		};
+		FF65ED5C18D526F000591398 /* Info pages */ = {
+			isa = PBXGroup;
+			children = (
+				FFE95AF018D53FB400F50617 /* info.h */,
+				FFE95AF118D53FB400F50617 /* info.m */,
+			);
+			name = "Info pages";
+			sourceTree = "<group>";
+		};
+		FF65ED6918D537CF00591398 /* App Icon [Rounded] */ = {
+			isa = PBXGroup;
+			children = (
+				FF65ED6A18D537CF00591398 /* AppIcon29x29.png */,
+				FF65ED6B18D537CF00591398 /* AppIcon29x29@2x.png */,
+				FF65ED6C18D537CF00591398 /* AppIcon40x40.png */,
+				FF65ED6D18D537CF00591398 /* AppIcon40x40@2x.png */,
+				FF65ED6E18D537CF00591398 /* AppIcon50x50.png */,
+				FF65ED6F18D537CF00591398 /* AppIcon50x50@2x.png */,
+				FF65ED7018D537CF00591398 /* AppIcon57x57.png */,
+				FF65ED7118D537CF00591398 /* AppIcon57x57@2x.png */,
+				FF65ED7218D537CF00591398 /* AppIcon60x60.png */,
+				FF65ED7318D537CF00591398 /* AppIcon60x60@2x.png */,
+				FF65ED7418D537CF00591398 /* AppIcon72x72.png */,
+				FF65ED7518D537CF00591398 /* AppIcon72x72@2x.png */,
+				FF65ED7618D537CF00591398 /* AppIcon76x76.png */,
+				FF65ED7718D537CF00591398 /* AppIcon76x76@2x.png */,
+				FF65ED7818D537CF00591398 /* iTunesArtwork.png */,
+				FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */,
+			);
+			path = "App Icon [Rounded]";
+			sourceTree = "<group>";
+		};
+		FF979DA718A7C26000566EE7 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF979DA418A7C22600566EE7 /* settingsViewController.h */,
+				FF979DA518A7C22600566EE7 /* settingsViewController.m */,
+			);
+			name = settings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FF996B5018A45BD800DA63C8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FF65ED6918D537CF00591398 /* App Icon [Rounded] */,
+				FF65ED6718D534B500591398 /* list-icon2.png */,
+				FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FFA6B5F018A187D000A85376 /* StarterProof */ = {
+			isa = PBXGroup;
+			children = (
+				FF14161118A09AEA00FE0E02 /* StarterProofAppDelegate.h */,
+				FF14161218A09AEA00FE0E02 /* StarterProofAppDelegate.m */,
+				FF14160C18A09A4400FE0E02 /* StarterProofViewController.h */,
+				FF14160D18A09A4400FE0E02 /* StarterProofViewController.m */,
+			);
+			name = StarterProof;
+			sourceTree = "<group>";
+		};
+		FFA6B5F118A1884F00A85376 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415E018A097E200FE0E02 /* AppDelegate.h */,
+				FF1415E118A097E200FE0E02 /* AppDelegate.m */,
+				FF1415E918A097E200FE0E02 /* MasterViewController.h */,
+				FF1415EA18A097E200FE0E02 /* MasterViewController.m */,
+				FF1415EC18A097E200FE0E02 /* DetailViewController.h */,
+				FF1415ED18A097E200FE0E02 /* DetailViewController.m */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		FFA6B5F218A18AC600A85376 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FF1415E318A097E200FE0E02 /* Main_iPhone.storyboard */,
+				FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFA6B5F318A18B6800A85376 /* StarterRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				FFA6B5F518A18BB000A85376 /* StarterRecipeAppDelegate.h */,
+				FFA6B5F618A18BB000A85376 /* StarterRecipeAppDelegate.m */,
+				FFA6B5E918A14F3D00A85376 /* starterRecipeViewController.h */,
+				FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */,
+			);
+			name = StarterRecipe;
+			sourceTree = "<group>";
+		};
+		FFA6B5F418A18B7200A85376 /* starterOutput */ = {
+			isa = PBXGroup;
+			children = (
+				FFA6B5EC18A16E4A00A85376 /* starterOutputViewController.h */,
+				FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */,
+			);
+			name = starterOutput;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF1415CD18A097E200FE0E02 /* zaCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF14160618A097E200FE0E02 /* Build configuration list for PBXNativeTarget "zaCalc" */;
+			buildPhases = (
+				FF1415CA18A097E200FE0E02 /* Sources */,
+				FF1415CB18A097E200FE0E02 /* Frameworks */,
+				FF1415CC18A097E200FE0E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zaCalc;
+			productName = vfrv;
+			productReference = FF1415CE18A097E200FE0E02 /* zaCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF1415F418A097E200FE0E02 /* zaCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF14160918A097E200FE0E02 /* Build configuration list for PBXNativeTarget "zaCalcTests" */;
+			buildPhases = (
+				FF1415F118A097E200FE0E02 /* Sources */,
+				FF1415F218A097E200FE0E02 /* Frameworks */,
+				FF1415F318A097E200FE0E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF1415FB18A097E200FE0E02 /* PBXTargetDependency */,
+			);
+			name = zaCalcTests;
+			productName = vfrvTests;
+			productReference = FF1415F518A097E200FE0E02 /* zaCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF1415C618A097E200FE0E02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = phade2grey;
+				TargetAttributes = {
+					FF1415F418A097E200FE0E02 = {
+						TestTargetID = FF1415CD18A097E200FE0E02;
+					};
+				};
+			};
+			buildConfigurationList = FF1415C918A097E200FE0E02 /* Build configuration list for PBXProject "zaCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF1415C518A097E200FE0E02;
+			productRefGroup = FF1415CF18A097E200FE0E02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF1415CD18A097E200FE0E02 /* zaCalc */,
+				FF1415F418A097E200FE0E02 /* zaCalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF1415CC18A097E200FE0E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF65ED7B18D537CF00591398 /* AppIcon29x29@2x.png in Resources */,
+				FF65ED7C18D537CF00591398 /* AppIcon40x40.png in Resources */,
+				FF65ED8618D537CF00591398 /* AppIcon76x76.png in Resources */,
+				FF65ED8818D537CF00591398 /* iTunesArtwork.png in Resources */,
+				FF65ED5E18D5330200591398 /* lab-beaker-icon copy.png in Resources */,
+				FF1415E818A097E200FE0E02 /* Main_iPad.storyboard in Resources */,
+				FF65ED8218D537CF00591398 /* AppIcon60x60.png in Resources */,
+				FF1415F018A097E200FE0E02 /* Images.xcassets in Resources */,
+				FF65ED6818D534B500591398 /* list-icon2.png in Resources */,
+				FF65ED8018D537CF00591398 /* AppIcon57x57.png in Resources */,
+				FF65ED7D18D537CF00591398 /* AppIcon40x40@2x.png in Resources */,
+				FF65ED7A18D537CF00591398 /* AppIcon29x29.png in Resources */,
+				FF65ED7F18D537CF00591398 /* AppIcon50x50@2x.png in Resources */,
+				FF65ED8918D537CF00591398 /* iTunesArtwork@2x.png in Resources */,
+				FF65ED8718D537CF00591398 /* AppIcon76x76@2x.png in Resources */,
+				FF65ED8418D537CF00591398 /* AppIcon72x72.png in Resources */,
+				FF65ED8118D537CF00591398 /* AppIcon57x57@2x.png in Resources */,
+				FF1415E518A097E200FE0E02 /* Main_iPhone.storyboard in Resources */,
+				FF65ED8518D537CF00591398 /* AppIcon72x72@2x.png in Resources */,
+				FF1415DC18A097E200FE0E02 /* InfoPlist.strings in Resources */,
+				FF65ED8318D537CF00591398 /* AppIcon60x60@2x.png in Resources */,
+				FF65ED7E18D537CF00591398 /* AppIcon50x50.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1415F318A097E200FE0E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF14160118A097E200FE0E02 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF1415CA18A097E200FE0E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1415E218A097E200FE0E02 /* AppDelegate.m in Sources */,
+				FFE95AF218D53FB400F50617 /* info.m in Sources */,
+				FF1415EB18A097E200FE0E02 /* MasterViewController.m in Sources */,
+				FF14161318A09AEA00FE0E02 /* StarterProofAppDelegate.m in Sources */,
+				FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */,
+				FF14160E18A09A4400FE0E02 /* StarterProofViewController.m in Sources */,
+				FFA6B5EE18A16E4A00A85376 /* starterOutputViewController.m in Sources */,
+				FFA6B5F718A18BB000A85376 /* StarterRecipeAppDelegate.m in Sources */,
+				FF1415DE18A097E200FE0E02 /* main.m in Sources */,
+				FF3E75CF18A1B03600CA92DE /* MySingletonClass.m in Sources */,
+				FF979DA618A7C22600566EE7 /* settingsViewController.m in Sources */,
+				FF1415EE18A097E200FE0E02 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1415F118A097E200FE0E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF14160318A097E200FE0E02 /* zaCalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF1415FB18A097E200FE0E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF1415CD18A097E200FE0E02 /* zaCalc */;
+			targetProxy = FF1415FA18A097E200FE0E02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF1415DA18A097E200FE0E02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF1415DB18A097E200FE0E02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FF1415E318A097E200FE0E02 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF1415E418A097E200FE0E02 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF1415E718A097E200FE0E02 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		FF1415FF18A097E200FE0E02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF14160018A097E200FE0E02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF14160418A097E200FE0E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF14160518A097E200FE0E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF14160718A097E200FE0E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vfrv/zaCalc-Prefix.pch";
+				INFOPLIST_FILE = "vfrv/zaCalc-Info.plist";
+				PRODUCT_NAME = zaCalc;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FF14160818A097E200FE0E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vfrv/zaCalc-Prefix.pch";
+				INFOPLIST_FILE = "vfrv/zaCalc-Info.plist";
+				PRODUCT_NAME = zaCalc;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FF14160A18A097E200FE0E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/vfrv.app/vfrv";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vfrv/vfrv-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "vfrvTests/zaCalcTests-Info.plist";
+				PRODUCT_NAME = zaCalcTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FF14160B18A097E200FE0E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/vfrv.app/vfrv";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vfrv/vfrv-Prefix.pch";
+				INFOPLIST_FILE = "vfrvTests/zaCalcTests-Info.plist";
+				PRODUCT_NAME = zaCalcTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF1415C918A097E200FE0E02 /* Build configuration list for PBXProject "zaCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF14160418A097E200FE0E02 /* Debug */,
+				FF14160518A097E200FE0E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF14160618A097E200FE0E02 /* Build configuration list for PBXNativeTarget "zaCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF14160718A097E200FE0E02 /* Debug */,
+				FF14160818A097E200FE0E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF14160918A097E200FE0E02 /* Build configuration list for PBXNativeTarget "zaCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF14160A18A097E200FE0E02 /* Debug */,
+				FF14160B18A097E200FE0E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF1415C618A097E200FE0E02 /* Project object */;
+}
