@@ -13,11 +13,37 @@
 
 -(IBAction)viewDidLoad {
 
+   NSString *distanceS = @"(inches)";
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults synchronize];
+    
+    prefermentAmount.text = [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"prefermentAmountN"]];
+    
+    if( [defaults integerForKey:@"prefDistance"] == 0 ) {
+        distanceS = @"(inches)";
+    }
+    else {
+        distanceS = @"(cm)";
+    }
+
+    lDistance.text = distanceS;
+}
+
+
+-(IBAction) viewWDidAppear { // This isn't working---bug try below function may not need this one but need above probably maybe
+    //- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+    
     NSString *distanceS = @"(inches)";
     
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
-    prefermentAmount.text = [NSString stringWithFormat:@"%.02f",global.prefermentAmountN];
-    if( global.prefDistance == 0) {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults synchronize];
+    
+    prefermentAmount.text = [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"prefermentAmountN"]];
+    
+    if( [defaults integerForKey:@"prefDistance"] == 0 ) {
         distanceS = @"(inches)";
     }
     else {
@@ -25,10 +51,11 @@
     }
     
     lDistance.text = distanceS;
+
 }
 
 -(IBAction)calculate {
-
+    
 	NSString *quantityS = quantity.text;
 	NSString *diameterS = diameter.text;
 	NSString *thicknessS = thickness.text;
@@ -41,23 +68,27 @@
 	NSString *wasteS = waste.text;
 
  
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
 
-	global.quantityN= [quantityS floatValue];
-	global.diameterN = [diameterS floatValue];
-    global.thicknessN = [thicknessS floatValue];
-	global.hydrationN = [hydrationS floatValue];
-	global.prefermentAmountN = [prefermentAmountS floatValue];
-    global.prefermentHydrationN = [prefermentHydrationS floatValue];
-	global.saltN = [saltS floatValue];
-    global.oilN = [oilS floatValue];
-	global.sugarN = [sugarS floatValue];
-	global.wasteN = [wasteS floatValue];
+    [defaults setFloat:[quantityS floatValue] forKey:@"quantityN"];
+    [defaults setFloat:[diameterS floatValue] forKey:@"diameterN"];
+    [defaults setFloat:[thicknessS floatValue] forKey:@"thicknessN"];
+    [defaults setFloat:[hydrationS floatValue] forKey:@"hydrationN"];
+    [defaults setFloat:[prefermentAmountS floatValue] forKey:@"prefermentAmountN"];
+    [defaults setFloat:[prefermentHydrationS floatValue] forKey:@"prefermentHydrationN"];
+    [defaults setFloat:[saltS floatValue] forKey:@"saltN"];
+    [defaults setFloat:[oilS floatValue] forKey:@"oilN"];
+    [defaults setFloat:[sugarS floatValue] forKey:@"sugarN"];
+    [defaults setFloat:[wasteS floatValue] forKey:@"wasteS"];
     
-    if( global.prefDistance == 1) {
-        global.diameterN = global.diameterN * 0.39370;
+    if( [defaults integerForKey:@"prefDistance"] == 1) {
+        [defaults setInteger:[defaults integerForKey:@"prefDistance"] * 0.39370 forKey:@"diameterN"];
 
     }
+    
+    [defaults synchronize];
+    
 }
 
 -(IBAction)closeKeyboard {

@@ -27,11 +27,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     weights = [[NSArray alloc] initWithObjects:@"Grams",@"Ounces",@"Cups & Tsp", nil];
     distances = [[NSArray alloc] initWithObjects:@"Inches",@"Centimeters", nil];
     temps = [[NSArray alloc] initWithObjects:@"Farenheit",@"Celsius", nil];
-   
+    
+    [distancePicker selectRow:[defaults integerForKey:@"prefDistance"] inComponent:0 animated:YES];
+    [tempPicker selectRow:[defaults integerForKey:@"prefTemp"] inComponent:0 animated:YES];
+    [weightPicker selectRow:[defaults integerForKey:@"prefWeight"] inComponent:0 animated:YES];
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -90,21 +96,30 @@
         return 0;
     }
     return 0;
+    
+
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if ([pickerView tag] == 0) {
-        global.prefDistance = [pickerView selectedRowInComponent:0];
+   
+        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefDistance"];
+        [defaults synchronize];
     }
     else if([pickerView tag] == 1)
     {
-        global.prefTemp = [pickerView selectedRowInComponent:0];
+   
+        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefTemp"];
+        [defaults synchronize];
     }
     else if([pickerView tag] == 2)
     {
-        global.prefWeight = [pickerView selectedRowInComponent:0];
+   
+        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefWeight"];
+        [defaults synchronize];
     }
 
 }

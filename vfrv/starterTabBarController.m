@@ -1,18 +1,18 @@
 //
-//  StarterRecipeInfoViewController.m
+//  starterTabBarController.m
 //  zaCalc
 //
-//  Created by sholl on 3/16/14.
+//  Created by sholl on 3/30/14.
 //  Copyright (c) 2014 phade2grey. All rights reserved.
 //
 
-#import "StarterRecipeInfoViewController.h"
+#import "starterTabBarController.h"
 
-@interface StarterRecipeInfoViewController ()
+@interface starterTabBarController ()
 
 @end
 
-@implementation StarterRecipeInfoViewController
+@implementation starterTabBarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,18 +27,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [textView layoutIfNeeded];
- 
-    textView.layoutManager.allowsNonContiguousLayout = false;
-    [textView sizeToFit];
-    [textView setScrollEnabled:YES];
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    //not working
+    if ([viewController.tabBarItem.title isEqualToString:@"Dough Ingredients"])
+    {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults synchronize];
+        
+
+        
+
+    }
 }
 
 /*
@@ -49,7 +58,6 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
- 
 }
 */
 

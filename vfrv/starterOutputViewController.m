@@ -28,7 +28,8 @@
 {
     [super viewDidLoad];
     
-   MySingletonClass *global = [MySingletonClass sharedSingleton];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
 
  //imported global variables from singleton
     
@@ -44,31 +45,29 @@
     NSString *units2S;
     NSString *units3S;
     NSString *units4S;
-
     
-    BallWeightN = 3.1415 * pow((global.diameterN/2),2) * global.thicknessN * 28.3495;
-    DoughWeightN = BallWeightN * (1 + global.wasteN/100) * global.quantityN;
+    BallWeightN = 3.1415 * pow(([defaults floatForKey:@"diameterN"]/2),2) * [defaults floatForKey:@"thicknessN"] * 28.3495;
+    DoughWeightN = BallWeightN * (1 + [defaults floatForKey:@"wasteN"]/100) * [defaults floatForKey:@"quantityN"];
   
-    float totalFlour = DoughWeightN / (global.hydrationN/100 + 1 + global.saltN/100 + global.oilN/100 + global.sugarN/100) - (global.prefermentAmountN/100 * global.prefermentHydrationN);
+    float totalFlour = DoughWeightN / ([defaults floatForKey:@"hydrationN"]/100 + 1 + [defaults floatForKey:@"saltN"]/100 + [defaults floatForKey:@"oilN"]/100 + [defaults floatForKey:@"sugarN"]/100) - ([defaults floatForKey:@"prefermentAmountN"]/100 * [defaults floatForKey:@"prefermentHydrationN"]);
     
-    float totalPreferment = totalFlour * global.prefermentAmountN/100;
-    float prefermentFlour = totalPreferment * (1-global.prefermentHydrationN/200);
+    float totalPreferment = totalFlour * [defaults floatForKey:@"prefermentAmountN"]/100;
+    float prefermentFlour = totalPreferment * (1-[defaults floatForKey:@"prefermentHydrationN"]/200);
     
     
-    
-    SugarN = (totalFlour + prefermentFlour) * global.sugarN/100;
-    OilN = (totalFlour + prefermentFlour) * global.oilN/100;
-    SaltN = (totalFlour + prefermentFlour) * global.saltN/100;
-    WaterN = (totalFlour + prefermentFlour) * global.hydrationN/100 - (totalPreferment * global.prefermentHydrationN/200) - OilN;
+    SugarN = (totalFlour + prefermentFlour) * [defaults floatForKey:@"sugarN"]/100;
+    OilN = (totalFlour + prefermentFlour) * [defaults floatForKey:@"oilN"]/100;
+    SaltN = (totalFlour + prefermentFlour) * [defaults floatForKey:@"saltN"]/100;
+    WaterN = (totalFlour + prefermentFlour) * [defaults floatForKey:@"hydrationN"]/100 - (totalPreferment * [defaults floatForKey:@"prefermentHydrationN"]/200) - OilN;
     RemainingFlourN = totalFlour * 1/3;
     InitFlourN = totalFlour * 2/3;
     
-    if( global.prefWeight == 0 ) {
+    if( [defaults integerForKey:@"prefWeight"] == 0 ) {
         unitsS= @" g";
         units2S= @" g";
         units3S= @" g";
         units4S= @" g";
-    } else if (global.prefWeight == 1) {
+    } else if ([defaults integerForKey:@"prefWeight"] == 1) {
         unitsS= @" oz";
         units2S= @" oz";
         units3S= @" oz";
@@ -128,6 +127,9 @@
     lInitFlour.text = [NSString stringWithFormat:@"%.02f",InitFlourN];
     lInitFlour.text = [lInitFlour.text stringByAppendingString:unitsS];
     
+    [defaults synchronize];
+    
+
     
 }
 

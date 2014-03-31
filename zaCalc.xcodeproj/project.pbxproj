@@ -45,6 +45,7 @@
 		FF65ED8718D537CF00591398 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7718D537CF00591398 /* AppIcon76x76@2x.png */; };
 		FF65ED8818D537CF00591398 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7818D537CF00591398 /* iTunesArtwork.png */; };
 		FF65ED8918D537CF00591398 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */; };
+		FF79CA0618E8F81700CFEB41 /* starterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF79CA0518E8F81700CFEB41 /* starterTabBarController.m */; };
 		FF979DA618A7C22600566EE7 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF979DA518A7C22600566EE7 /* settingsViewController.m */; };
 		FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */; };
 		FFA6B5EE18A16E4A00A85376 /* starterOutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA6B5ED18A16E4A00A85376 /* starterOutputViewController.m */; };
@@ -110,8 +111,10 @@
 		FF65ED7718D537CF00591398 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		FF65ED7818D537CF00591398 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		FF79CA0418E8F81700CFEB41 /* starterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starterTabBarController.h; sourceTree = "<group>"; };
+		FF79CA0518E8F81700CFEB41 /* starterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starterTabBarController.m; sourceTree = "<group>"; };
 		FF979DA418A7C22600566EE7 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
-		FF979DA518A7C22600566EE7 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		FF979DA518A7C22600566EE7 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		FFA6B5E918A14F3D00A85376 /* starterRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starterRecipeViewController.h; sourceTree = "<group>"; };
 		FFA6B5EA18A14F3D00A85376 /* starterRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starterRecipeViewController.m; sourceTree = "<group>"; };
 		FFA6B5EC18A16E4A00A85376 /* starterOutputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starterOutputViewController.h; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 		FF14161418A09D9800FE0E02 /* starterCalc */ = {
 			isa = PBXGroup;
 			children = (
+				FF79CA0718E8F82000CFEB41 /* starterTabBar */,
 				FF65ED5C18D526F000591398 /* Info pages */,
 				FFA6B5F018A187D000A85376 /* StarterProof */,
 				FFA6B5F318A18B6800A85376 /* StarterRecipe */,
@@ -262,6 +266,15 @@
 				FF65ED7918D537CF00591398 /* iTunesArtwork@2x.png */,
 			);
 			path = "App Icon [Rounded]";
+			sourceTree = "<group>";
+		};
+		FF79CA0718E8F82000CFEB41 /* starterTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FF79CA0418E8F81700CFEB41 /* starterTabBarController.h */,
+				FF79CA0518E8F81700CFEB41 /* starterTabBarController.m */,
+			);
+			name = starterTabBar;
 			sourceTree = "<group>";
 		};
 		FF979DA718A7C26000566EE7 /* settings */ = {
@@ -455,6 +468,7 @@
 			files = (
 				FF1415E218A097E200FE0E02 /* AppDelegate.m in Sources */,
 				FF1415EB18A097E200FE0E02 /* MasterViewController.m in Sources */,
+				FF79CA0618E8F81700CFEB41 /* starterTabBarController.m in Sources */,
 				FF14161318A09AEA00FE0E02 /* StarterProofAppDelegate.m in Sources */,
 				FFA6B5EB18A14F3D00A85376 /* starterRecipeViewController.m in Sources */,
 				FF14160E18A09A4400FE0E02 /* StarterProofViewController.m in Sources */,

@@ -6,8 +6,8 @@
 @implementation StarterProofViewController
 -(IBAction)calculate {
     
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
 	//Here we are creating two strings and assigning the value of the tfTimes to the strings.
 	NSString *sTime1 = tfTime1.text;
 	NSString *sTime2 = tfTime2.text;
@@ -51,7 +51,7 @@
     
     
     //conver to F if needed
-    if( global.prefTemp == 1) {
+    if( [defaults integerForKey:@"prefTemp"]  == 1) {
         fTemp1 = fTemp1 * 9/5 + 32;
         fTemp2 = fTemp2 * 9/5 + 32;
         fTemp3 = fTemp3 * 9/5 + 32;
@@ -79,7 +79,8 @@
     starterPercent.text = [NSString stringWithFormat:@"%.02f",starterPercentOutput];
     starterPercent.text = [starterPercent.text stringByAppendingString:@"%"];
     
-    global.prefermentAmountN = starterPercentOutput;
+    [defaults setFloat:starterPercentOutput forKey:@"prefermentAmountN"];
+    [defaults synchronize];
 }
 -(IBAction)closeKeyboard {
 	//Here we are closing the keyboard for both of the tfTimes.
@@ -104,15 +105,16 @@
 -(void)viewDidLoad {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
-    MySingletonClass *global = [MySingletonClass sharedSingleton];
+    //MySingletonClass *global = [MySingletonClass sharedSingleton];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     tempUnit.text = @"(F)";
     
     //conver to F if needed
-    if( global.prefTemp == 1) {
+    if( [defaults integerForKey:@"prefTemp"] ) {
         tempUnit.text = @"(C)";
     }
-    
+   [defaults synchronize];
 }
 -(void)dealloc {
 	//This release the decleration we made in the header file

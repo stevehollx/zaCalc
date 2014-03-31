@@ -285,7 +285,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Click the (i) button on the page to get descriptions and recommended values for input." translatesAutoresizingMaskIntoConstraints="NO" id="eFc-7a-9jP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Click the ⓘ button on the page to get descriptions and recommended values for input." translatesAutoresizingMaskIntoConstraints="NO" id="eFc-7a-9jP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="637"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -349,7 +349,7 @@ Coming in the next version:
             </objects>
             <point key="canvasLocation" x="915" y="1313"/>
         </scene>
-        <!--View Controller - About Proofing Info-->
+        <!--View Controller - Help: Proofing Info-->
         <scene sceneID="1fx-ty-02r">
             <objects>
                 <viewController id="DUI-1R-reI" sceneMemberID="viewController">
@@ -470,7 +470,7 @@ Coming in the next version:
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Proofing Info" id="oE3-8m-Zip"/>
+                    <navigationItem key="navigationItem" title="Help: Proofing Info" id="oE3-8m-Zip"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SD2-yR-amc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -777,10 +777,10 @@ Coming in the next version:
             </objects>
             <point key="canvasLocation" x="1685" y="-1051"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Starter Tab Bar Controller-->
         <scene sceneID="9YI-lf-Sfe">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="PZr-bV-hQX" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="PZr-bV-hQX" customClass="starterTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OZZ-iP-xXH"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VIG-cd-8qr">
@@ -795,7 +795,7 @@ Coming in the next version:
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIC-i8-5XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="-757"/>
+            <point key="canvasLocation" x="984" y="-652"/>
         </scene>
         <!--Starter Recipe View Controller - Dough Ingredients-->
         <scene sceneID="w1e-z4-F2K">
@@ -844,7 +844,7 @@ Coming in the next version:
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpt-pe-6cM">
                                 <rect key="frame" x="216" y="74" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMM-Bs-Uwi">
@@ -853,7 +853,7 @@ Coming in the next version:
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=".070426" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Iw-QB-ff8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=".070" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Iw-QB-ff8">
                                 <rect key="frame" x="216" y="138" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1015,7 +1015,7 @@ Coming in the next version:
             </objects>
             <point key="canvasLocation" x="1615" y="-414"/>
         </scene>
-        <!--Table View Controller - Help-->
+        <!--Table View Controller - Help: Dough Ingredients-->
         <scene sceneID="rQQ-ut-DfS">
             <objects>
                 <tableViewController id="Kf7-uQ-sC7" sceneMemberID="viewController">
@@ -1223,7 +1223,7 @@ Coming in the next version:
                             <outlet property="delegate" destination="Kf7-uQ-sC7" id="i3j-10-70t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Help" id="wpa-0h-oJk">
+                    <navigationItem key="navigationItem" title="Help: Dough Ingredients" id="wpa-0h-oJk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Z19-hb-Nqy"/>
                     </navigationItem>
                 </tableViewController>
@@ -1287,7 +1287,7 @@ Coming in the next version:
             </objects>
             <point key="canvasLocation" x="3087" y="-1160"/>
         </scene>
-        <!--View Controller - Recipe Info-->
+        <!--View Controller - Help: Recipe-->
         <scene sceneID="fRA-cw-7Ka">
             <objects>
                 <viewController id="g5z-bD-Syz" sceneMemberID="viewController">
@@ -1371,7 +1371,7 @@ Coming in the next version:
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Info" id="ojX-ex-4Uu"/>
+                    <navigationItem key="navigationItem" title="Help: Recipe" id="ojX-ex-4Uu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfq-Wx-shG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
