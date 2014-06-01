@@ -114,6 +114,52 @@
     //MySingletonClass *global = [MySingletonClass sharedSingleton];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
+    
+    
+    if (![defaults objectForKey:@"firstRunCalc"] && ![defaults objectForKey:@"firstRunRecipe"]) {
+        [defaults setObject:[NSDate date] forKey:@"firstRunCalc"];
+        
+        
+        //set nonrecipe params
+        [defaults setFloat:24 forKey:@"fTime1N"];
+        [defaults setFloat:24 forKey:@"fTime2N"];
+        [defaults setFloat:0 forKey:@"fTime3N"];
+        [defaults setFloat:0 forKey:@"fTime4N"];
+        [defaults setFloat:0 forKey:@"fTime5N"];
+        [defaults setFloat:65 forKey:@"fTemp1N"];
+        [defaults setFloat:65 forKey:@"fTemp2N"];
+        [defaults setFloat:65 forKey:@"fTemp3N"];
+        [defaults setFloat:65 forKey:@"fTemp4N"];
+        [defaults setFloat:65 forKey:@"fTemp5N"];
+        
+        [defaults setFloat:1 forKey:@"wasteN"];
+        [defaults setFloat:2 forKey:@"prefermentAmountN"];
+        [defaults setFloat:100 forKey:@"prefermentHydrationN"];
+        [defaults setFloat:3 forKey:@"saltN"];
+        [defaults setFloat:63 forKey:@"hydrationN"];
+        [defaults setFloat:.070 forKey:@"thicknessN"];
+        [defaults setFloat:12 forKey:@"diameterN"];
+        [defaults setFloat:1 forKey:@"quantityN"];
+        
+        [defaults synchronize];
+        
+    } else if (![defaults objectForKey:@"firstRunCalc"] && [defaults objectForKey:@"firstRunRecipe"]) {
+        [defaults setFloat:24 forKey:@"fTime1N"];
+        [defaults setFloat:24 forKey:@"fTime2N"];
+        [defaults setFloat:0 forKey:@"fTime3N"];
+        [defaults setFloat:0 forKey:@"fTime4N"];
+        [defaults setFloat:0 forKey:@"fTime5N"];
+        [defaults setFloat:65 forKey:@"fTemp1N"];
+        [defaults setFloat:65 forKey:@"fTemp2N"];
+        [defaults setFloat:65 forKey:@"fTemp3N"];
+        [defaults setFloat:65 forKey:@"fTemp4N"];
+        [defaults setFloat:65 forKey:@"fTemp5N"];
+        
+        [defaults setFloat:1 forKey:@"wasteN"];
+        [defaults setFloat:2 forKey:@"prefermentAmountN"];
+        [defaults setFloat:100 forKey:@"prefermentHydrationN"];
+
+    }
     tempUnit.text = @"(F)";
     
     //conver to F if needed
@@ -124,13 +170,13 @@
     //load last saved settings
     tfTime1.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime1N"]];
     tfTime2.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime2N"]];
-    tfTime3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime13"]];
+    tfTime3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime3N"]];
     tfTime4.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime4N"]];
     tfTime5.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime5N"]];
     
     tfTemp1.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp1N"]];
     tfTemp2.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp2N"]];
-    tfTemp3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp13"]];
+    tfTemp3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp3N"]];
     tfTemp4.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp4N"]];
     tfTemp5.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp5N"]];
     

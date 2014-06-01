@@ -28,6 +28,13 @@
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
+    
+    if (![defaults objectForKey:@"firstRunYcf"]) {
+        [defaults setObject:[NSDate date] forKey:@"firstRunYcf"];
+        [defaults setFloat:1.00 forKey:@"ycfN"];
+
+    }
+    
     ycf.text = [NSString stringWithFormat: @"%f", [defaults floatForKey:@"ycfN"]];
     
     NSString *sYcf = ycf.text;

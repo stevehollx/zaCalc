@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    originalCenter = self.view.center;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +67,25 @@
 
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+    self.view.center = CGPointMake(self->originalCenter.x,self->originalCenter.x-116);
+    [UIView commitAnimations];
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+    self.view.center = self->originalCenter;
+    [UIView commitAnimations];
+    
+}
+
+
 -(IBAction)closeKeyboard {
 	//Here we are closing the keyboard for both of the tfTimes.
 	[quantity resignFirstResponder];
@@ -76,6 +96,28 @@
     [sugar resignFirstResponder];
     [recipeName resignFirstResponder];
 
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[quantity resignFirstResponder];
+    [diameter resignFirstResponder];
+    [thickness resignFirstResponder];
+    [hydration resignFirstResponder];
+    [salt resignFirstResponder];
+    [sugar resignFirstResponder];
+    [recipeName resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView{
+	[quantity resignFirstResponder];
+    [diameter resignFirstResponder];
+    [thickness resignFirstResponder];
+    [hydration resignFirstResponder];
+    [salt resignFirstResponder];
+    [sugar resignFirstResponder];
+    [recipeName resignFirstResponder];
+    return YES;
 }
 
 /*

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface saveNewRecipeViewController : UIViewController {
+@interface saveNewRecipeViewController : UIViewController<UITextFieldDelegate> {
     IBOutlet UITextField *quantity;
     IBOutlet UITextField *diameter;
     IBOutlet UITextField *thickness;
@@ -16,9 +16,9 @@
     IBOutlet UITextField *salt;
     IBOutlet UITextField *oil;
     IBOutlet UITextField *sugar;
-    IBOutlet UITextField *waste;
     IBOutlet UILabel *lDistance;
     IBOutlet UITextField *recipeName;
+    CGPoint originalCenter;
 }
 
 @end

@@ -30,8 +30,8 @@
 
     //Load aray at first run an set to NP
     
-   if (![defaults objectForKey:@"firstRun"]) {
-        [defaults setObject:[NSDate date] forKey:@"firstRun"];
+   if (![defaults objectForKey:@"firstRunRecipe"]) {
+        [defaults setObject:[NSDate date] forKey:@"firstRunRecipe"];
     
         recipeArray  = [[NSMutableArray alloc] init];
     
@@ -40,36 +40,29 @@
 
         NSMutableArray *recipe1;
         recipe1 = [[NSMutableArray alloc] init];
-        recipe1 = [NSMutableArray arrayWithObjects:@"Neapolitan",@"2",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
+        recipe1 = [NSMutableArray arrayWithObjects:@"Neapolitan",@"1",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
         [recipeArray insertObject:recipe1 atIndex:recipeArray.count];
          
         NSMutableArray *recipe2;
         recipe2 = [[NSMutableArray alloc] init];
-        recipe1 = [NSMutableArray arrayWithObjects:@"NY",@"200",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
-        [recipeArray insertObject:recipe1 atIndex:recipeArray.count];
+        recipe2 = [NSMutableArray arrayWithObjects:@"NY",@"1",@"16",@".085",@"60",@"1.5",@"1.0",@"0",nil];
+        [recipeArray insertObject:recipe2 atIndex:recipeArray.count];
     
+       NSMutableArray *recipe3;
+       recipe3 = [[NSMutableArray alloc] init];
+       recipe3 = [NSMutableArray arrayWithObjects:@"Thin Crust",@"1",@"14",@".085",@"36",@"1.2",@"3.5",@"1.2",nil];
+       [recipeArray insertObject:recipe3 atIndex:recipeArray.count];
+       
+       NSMutableArray *recipe4;
+       recipe4 = [[NSMutableArray alloc] init];
+       recipe4 = [NSMutableArray arrayWithObjects:@"Deep Dish",@"1",@"12",@".135",@"52",@"1",@"15",@"0",nil];
+       [recipeArray insertObject:recipe4 atIndex:recipeArray.count];
+    
+       
         [defaults setInteger:0 forKey:@"selectedRecipe"];
     
         //save recipe array to user def
         [defaults setObject:recipeArray forKey:@"recipeArray"];
-
-        //set nonrecipe params
-        [defaults setFloat:24 forKey:@"fTime1N"];
-        [defaults setFloat:24 forKey:@"fTime2N"];
-        [defaults setFloat:0 forKey:@"fTime3N"];
-        [defaults setFloat:0 forKey:@"fTime4N"];
-        [defaults setFloat:0 forKey:@"fTime5N"];
-        [defaults setFloat:65 forKey:@"fTemp1N"];
-        [defaults setFloat:65 forKey:@"fTemp2N"];
-        [defaults setFloat:65 forKey:@"fTemp3N"];
-        [defaults setFloat:65 forKey:@"fTemp4N"];
-        [defaults setFloat:65 forKey:@"fTemp5N"];
-
-        [defaults setFloat:1.5 forKey:@"wasteS"];
-        [defaults setFloat:2 forKey:@"prefermentAmountN"];
-        [defaults setFloat:100 forKey:@"prefermentHydrationN"];
-        [defaults setFloat:1 forKey:@"quantityN"];
-
     
         [defaults synchronize];
         
