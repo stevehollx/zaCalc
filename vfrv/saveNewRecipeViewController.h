@@ -13,7 +13,6 @@
     IBOutlet UITextField *diameter;
     IBOutlet UITextField *thickness;
     IBOutlet UITextField *hydration;
-    IBOutlet UITextField *prefermentHydration;
     IBOutlet UITextField *salt;
     IBOutlet UITextField *oil;
     IBOutlet UITextField *sugar;

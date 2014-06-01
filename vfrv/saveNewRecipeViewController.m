@@ -37,7 +37,44 @@
 
 
 - (IBAction)saveRecipe:(id)sender {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    NSMutableArray *recipeArray = [[defaults objectForKey:@"recipeArray"] mutableCopy];
+
+    NSString *recipeNameS = recipeName.text;
+    NSNumber *quantityN = [NSNumber numberWithFloat:[quantity.text floatValue]];
+    NSNumber *diameterN = [NSNumber numberWithFloat:[diameter.text floatValue]];
+    NSNumber *thicknessN = [NSNumber numberWithFloat:[thickness.text floatValue]];
+    NSNumber *hydrationN = [NSNumber numberWithFloat:[hydration.text floatValue]];
+    NSNumber *saltN = [NSNumber numberWithFloat:[salt.text floatValue]];
+    NSNumber *oilN = [NSNumber numberWithFloat:[oil.text floatValue]];
+    NSNumber *sugarN = [NSNumber numberWithFloat:[sugar.text floatValue]];
+
+    NSMutableArray *newRecipe = [[NSMutableArray alloc] init];
+    newRecipe = [NSMutableArray arrayWithObjects:recipeNameS,quantityN,diameterN,thicknessN,hydrationN,saltN,oilN,sugarN,nil];
+    [recipeArray insertObject:newRecipe atIndex:recipeArray.count];
+    
+    //save recipe array to user def
+    [defaults setObject:recipeArray forKey:@"recipeArray"];
+    
+    [defaults synchronize];
+    NSLog(@"Recipe array in add page is %@", recipeArray);
+
+    
     [self.navigationController popViewControllerAnimated:YES]; //simulates pressing back
+
+}
+
+-(IBAction)closeKeyboard {
+	//Here we are closing the keyboard for both of the tfTimes.
+	[quantity resignFirstResponder];
+    [diameter resignFirstResponder];
+    [thickness resignFirstResponder];
+    [hydration resignFirstResponder];
+    [salt resignFirstResponder];
+    [sugar resignFirstResponder];
+    [recipeName resignFirstResponder];
 
 }
 

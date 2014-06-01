@@ -28,12 +28,74 @@
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-    //this probably needs to be dynamic below
-    recipes = [[NSArray alloc] initWithObjects:@"Neapolitan",@"New York",@"Chicago Deep-Dish", @"American", @"Cracker",@"Thick",nil];
+    //Load aray at first run an set to NP
     
+   if (![defaults objectForKey:@"firstRun"]) {
+        [defaults setObject:[NSDate date] forKey:@"firstRun"];
+    
+        recipeArray  = [[NSMutableArray alloc] init];
+    
+        //set stock recipes
+        //     quantity, diameter, thickness, hydration, salt, oil, sugar
+
+        NSMutableArray *recipe1;
+        recipe1 = [[NSMutableArray alloc] init];
+        recipe1 = [NSMutableArray arrayWithObjects:@"Neapolitan",@"2",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
+        [recipeArray insertObject:recipe1 atIndex:recipeArray.count];
+         
+        NSMutableArray *recipe2;
+        recipe2 = [[NSMutableArray alloc] init];
+        recipe1 = [NSMutableArray arrayWithObjects:@"NY",@"200",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
+        [recipeArray insertObject:recipe1 atIndex:recipeArray.count];
+    
+        [defaults setInteger:0 forKey:@"selectedRecipe"];
+    
+        //save recipe array to user def
+        [defaults setObject:recipeArray forKey:@"recipeArray"];
+
+        //set nonrecipe params
+        [defaults setFloat:24 forKey:@"fTime1N"];
+        [defaults setFloat:24 forKey:@"fTime2N"];
+        [defaults setFloat:0 forKey:@"fTime3N"];
+        [defaults setFloat:0 forKey:@"fTime4N"];
+        [defaults setFloat:0 forKey:@"fTime5N"];
+        [defaults setFloat:65 forKey:@"fTemp1N"];
+        [defaults setFloat:65 forKey:@"fTemp2N"];
+        [defaults setFloat:65 forKey:@"fTemp3N"];
+        [defaults setFloat:65 forKey:@"fTemp4N"];
+        [defaults setFloat:65 forKey:@"fTemp5N"];
+
+        [defaults setFloat:1.5 forKey:@"wasteS"];
+        [defaults setFloat:2 forKey:@"prefermentAmountN"];
+        [defaults setFloat:100 forKey:@"prefermentHydrationN"];
+        [defaults setFloat:1 forKey:@"quantityN"];
+
+    
+        [defaults synchronize];
+        
+   } else {
+       recipeArray = [defaults objectForKey:@"recipeArray"];
+   }
+    
+    
+        //debugging
+        NSLog(@"Selected Recipe is %d", [defaults integerForKey:@"selectedRecipe"]);
+        NSLog(@"Recipe array on list page is %@", recipeArray);
+         
+    //load preselected recipe parameers into memory
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:5] floatValue] forKey:@"saltN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:6] floatValue] forKey:@"oilN"];
+    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
+/*
     [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
-  
-    
+    [recipePicker reloadAllComponents];
+
+    [defaults synchronize];
+  */
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -43,17 +105,20 @@
 }
 
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    //load recipe variables into memory
-    if (self.isMovingFromParentViewController) {
-        
-//do something
-        
-    }
+- (void)viewDidAppear:(BOOL)animated {
+    [self loadPicker];
+
 }
 
+- (void)loadPicker {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"pickerloaded");
 
+    [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
+    [recipePicker reloadAllComponents];
+    
+    [defaults synchronize];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -91,7 +156,7 @@
    /* if ([pickerView tag] == 0) {
         return sizeof(recipes);
     } else { return 0; } */
-    return recipes.count;
+    return recipeArray.count;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
@@ -103,7 +168,7 @@
         return 0;
     }
     */
-    return recipes[row];
+    return recipeArray[row][0];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
@@ -113,31 +178,18 @@
     if ([pickerView tag] == 0) {
         [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"selectedRecipe"];
         
+        //load selected recipe parameers into memory
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:5] floatValue] forKey:@"saltN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:6] floatValue] forKey:@"oilN"];
+        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
+        
         [defaults synchronize];
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*

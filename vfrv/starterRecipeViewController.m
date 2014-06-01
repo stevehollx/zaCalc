@@ -30,12 +30,14 @@
 
     lDistance.text = distanceS;
     
-    quantity.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"quantityN"]];
-    diameter.text =  [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"diameterN"]];
-    thickness.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"thicknessN"]];
+    //set values to last remembered
+    
+    quantity.text = [NSString stringWithFormat:@"%.1f",[defaults floatForKey:@"quantityN"]];
+    diameter.text =  [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"diameterN"]];
+    thickness.text = [NSString stringWithFormat:@"%.04f",[defaults floatForKey:@"thicknessN"]];
     hydration.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"hydrationN"]];
-    prefermentAmount.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"prefermentAmountN"]];
-    prefermentHydration.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"prefermentHydrationN"]];
+    prefermentAmount.text = [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"prefermentAmountN"]];
+    prefermentHydration.text = [NSString stringWithFormat:@"%.0f",[defaults floatForKey:@"prefermentHydrationN"]];
     salt.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"saltN"]];
     oil.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"oilN"]];
     sugar.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"sugarN"]];

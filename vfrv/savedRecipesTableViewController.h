@@ -13,7 +13,6 @@
     
     IBOutlet UIPickerView *recipePicker;
     
-    
-    NSArray *recipes;
+    NSMutableArray *recipeArray;
 }
 @end

@@ -399,7 +399,7 @@ Coming in the next version:
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Og7-GU-l0v" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ddh-t3-wZk"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="HkA-hq-ylj">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -2235,12 +2235,9 @@ Coming in the next version:
                                 <state key="normal" title=" ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="closeKeyboard" destination="R01-yU-g7S" eventType="touchUpInside" id="qpS-FA-nIo"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55Q-TW-aEl">
-                                <rect key="frame" x="216" y="409" width="90" height="30"/>
+                                <rect key="frame" x="216" y="357" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save Recipe!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2266,12 +2263,6 @@ Coming in the next version:
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xep-vb-tC3">
-                                <rect key="frame" x="216" y="298" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="62" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-Zz-QSY">
                                 <rect key="frame" x="216" y="169" width="86" height="30"/>
@@ -2304,13 +2295,6 @@ Coming in the next version:
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waste (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-4w-C0b">
-                                <rect key="frame" x="20" y="302" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hydration Level (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEY-xj-CeC">
                                 <rect key="frame" x="20" y="173" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2319,13 +2303,13 @@ Coming in the next version:
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-W6-C2Z">
-                                <rect key="frame" x="138" y="373" width="164" height="30"/>
+                                <rect key="frame" x="138" y="321" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iye-l4-J7n">
-                                <rect key="frame" x="20" y="376" width="104" height="21"/>
+                                <rect key="frame" x="20" y="324" width="104" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2367,7 +2351,7 @@ Coming in the next version:
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IE-Ly-fQd">
-                                <rect key="frame" x="25" y="409" width="22" height="22"/>
+                                <rect key="frame" x="25" y="357" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
@@ -2402,7 +2386,6 @@ Coming in the next version:
                         <outlet property="salt" destination="t3o-HD-IyP" id="GgY-SL-VbY"/>
                         <outlet property="sugar" destination="vYJ-yF-Wuh" id="Lof-lf-IHM"/>
                         <outlet property="thickness" destination="WH6-1h-heb" id="mFS-5g-2ld"/>
-                        <outlet property="waste" destination="xep-vb-tC3" id="1px-vd-5DV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jut-7T-jYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2458,7 +2441,7 @@ Coming in the next version:
                                                     <rect key="contentStretch" x="0.0" y="0.49999999999999994" width="1" height="1"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="s2Z-lS-9qb" id="lOh-f9-RbP"/>
-                                                        <outlet property="delegate" destination="s2Z-lS-9qb" id="2Ge-ZW-NRI"/>
+                                                        <outlet property="delegate" destination="s2Z-lS-9qb" id="ag0-I8-pDo"/>
                                                     </connections>
                                                 </pickerView>
                                             </subviews>
@@ -2481,7 +2464,6 @@ Coming in the next version:
         <!--Ycf View Controller - Yeast Correction Factor-->
         <scene sceneID="BD7-Te-FbN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oT3-sc-zr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MCn-Af-6yt" customClass="ycfViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DMV-SC-xzg"/>
@@ -2529,6 +2511,7 @@ Coming in the next version:
                         <outlet property="ycf" destination="rpD-MT-wFb" id="LSa-Q5-CQp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oT3-sc-zr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951" y="1"/>
         </scene>
