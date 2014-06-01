@@ -35,8 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)saveRecipe {
-   //
+
+- (IBAction)saveRecipe:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES]; //simulates pressing back
+
 }
 
 /*

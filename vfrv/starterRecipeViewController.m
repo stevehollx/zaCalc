@@ -29,30 +29,17 @@
     }
 
     lDistance.text = distanceS;
+    
+    
 }
 
-
--(IBAction) viewWDidAppear { // This isn't working---bug try below function may not need this one but need above probably maybe
-    //- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-    
-    NSString *distanceS = @"(inches)";
-    
+//This is a fix for when the tab has loaded and the user switches back to the preferment tab to change, since navigating back to recipe doesn't update values.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    [defaults synchronize];
-    
     prefermentAmount.text = [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"prefermentAmountN"]];
-    
-    if( [defaults integerForKey:@"prefDistance"] == 0 ) {
-        distanceS = @"(inches)";
-    }
-    else {
-        distanceS = @"(cm)";
-    }
-    
-    lDistance.text = distanceS;
-
 }
+
 
 -(IBAction)calculate {
     
