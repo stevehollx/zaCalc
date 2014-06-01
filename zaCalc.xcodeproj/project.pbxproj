@@ -30,6 +30,7 @@
 		FF51CFDB18EA5D50003967DC /* saveNewRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51CFDA18EA5D50003967DC /* saveNewRecipeViewController.m */; };
 		FF51CFDF18EA5EAA003967DC /* savedRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51CFDE18EA5EAA003967DC /* savedRecipesTableViewController.m */; };
 		FF527285193AB10100C5F52F /* ycfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF527284193AB10100C5F52F /* ycfViewController.m */; };
+		FF52728B193ADE2000C5F52F /* MainPAgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52728A193ADE2000C5F52F /* MainPAgeViewController.m */; };
 		FF65ED5E18D5330200591398 /* lab-beaker-icon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */; };
 		FF65ED6818D534B500591398 /* list-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6718D534B500591398 /* list-icon2.png */; };
 		FF65ED7A18D537CF00591398 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65ED6A18D537CF00591398 /* AppIcon29x29.png */; };
@@ -102,6 +103,8 @@
 		FF51CFDE18EA5EAA003967DC /* savedRecipesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savedRecipesTableViewController.m; sourceTree = "<group>"; };
 		FF527283193AB10100C5F52F /* ycfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ycfViewController.h; sourceTree = "<group>"; };
 		FF527284193AB10100C5F52F /* ycfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ycfViewController.m; sourceTree = "<group>"; };
+		FF527289193ADE2000C5F52F /* MainPAgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPAgeViewController.h; sourceTree = "<group>"; };
+		FF52728A193ADE2000C5F52F /* MainPAgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPAgeViewController.m; sourceTree = "<group>"; };
 		FF65ED5D18D5330200591398 /* lab-beaker-icon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lab-beaker-icon copy.png"; sourceTree = "<group>"; };
 		FF65ED6718D534B500591398 /* list-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon2.png"; sourceTree = "<group>"; };
 		FF65ED6A18D537CF00591398 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 		FFA6B5F118A1884F00A85376 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				FF527289193ADE2000C5F52F /* MainPAgeViewController.h */,
+				FF52728A193ADE2000C5F52F /* MainPAgeViewController.m */,
 				FF979DA718A7C26000566EE7 /* settings */,
 				FF51CFDC18EA5D54003967DC /* saveNewRecipe */,
 				FF51CFD818EA5D35003967DC /* savedRecipes */,
@@ -506,6 +511,7 @@
 				FF51CFDF18EA5EAA003967DC /* savedRecipesTableViewController.m in Sources */,
 				FFA6B5EE18A16E4A00A85376 /* starterOutputViewController.m in Sources */,
 				FFA6B5F718A18BB000A85376 /* StarterRecipeAppDelegate.m in Sources */,
+				FF52728B193ADE2000C5F52F /* MainPAgeViewController.m in Sources */,
 				FF1415DE18A097E200FE0E02 /* main.m in Sources */,
 				FF3E75CF18A1B03600CA92DE /* MySingletonClass.m in Sources */,
 				FF979DA618A7C22600566EE7 /* settingsViewController.m in Sources */,

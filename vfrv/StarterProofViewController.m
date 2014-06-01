@@ -7,6 +7,7 @@
 -(IBAction)calculate {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
 
 	//Here we are creating two strings and assigning the value of the tfTimes to the strings.
 	NSString *sTime1 = tfTime1.text;
@@ -21,20 +22,7 @@
 	NSString *sTemp4 = tfTemp4.text;
 	NSString *sTemp5 = tfTemp5.text;
     
-	//Here we are creating three integers
-    float fTime1;
-	float fTime2;
-    float fTime3;
-    float fTime4;
-    float fTime5;
-	double fOutput;
-    
-    float fTemp1;
-	float fTemp2;
-    float fTemp3;
-    float fTemp4;
-    float fTemp5;
-	float starterPercentOutput;
+
     
 	//Here we are assigning the values 
 	fTime1 = [sTime1 floatValue];
@@ -81,7 +69,22 @@
     starterPercent.text = [NSString stringWithFormat:@"%.02f",starterPercentOutput];
     starterPercent.text = [starterPercent.text stringByAppendingString:@"%"];
     
+    //store preferment amount in memory
     [defaults setFloat:starterPercentOutput forKey:@"prefermentAmountN"];
+    
+    //save user settings
+    [defaults setFloat:fTime1 forKey:@"fTime1N"];
+    [defaults setFloat:fTime2 forKey:@"fTime2N"];
+    [defaults setFloat:fTime3 forKey:@"fTime3N"];
+    [defaults setFloat:fTime4 forKey:@"fTime4N"];
+    [defaults setFloat:fTime5 forKey:@"fTime5N"];
+    
+    [defaults setFloat:fTemp1 forKey:@"fTemp1N"];
+    [defaults setFloat:fTemp2 forKey:@"fTemp2N"];
+    [defaults setFloat:fTemp3 forKey:@"fTemp3N"];
+    [defaults setFloat:fTemp4 forKey:@"fTemp4N"];
+    [defaults setFloat:fTemp5 forKey:@"fTemp5N"];
+    
     [defaults synchronize];
 }
 -(IBAction)closeKeyboard {
@@ -117,8 +120,45 @@
     if( [defaults integerForKey:@"prefTemp"] ) {
         tempUnit.text = @"(C)";
     }
+    
+    //load last saved settings
+    tfTime1.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime1N"]];
+    tfTime2.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime2N"]];
+    tfTime3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime13"]];
+    tfTime4.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime4N"]];
+    tfTime5.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTime5N"]];
+    
+    tfTemp1.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp1N"]];
+    tfTemp2.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp2N"]];
+    tfTemp3.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp13"]];
+    tfTemp4.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp4N"]];
+    tfTemp5.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"fTemp5N"]];
+    
    [defaults synchronize];
 }
+
+
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //save user settings
+    [defaults setFloat:[tfTime1.text floatValue] forKey:@"fTime1N"];
+    [defaults setFloat:[tfTime2.text floatValue] forKey:@"fTime2N"];
+    [defaults setFloat:[tfTime3.text floatValue] forKey:@"fTime3N"];
+    [defaults setFloat:[tfTime4.text floatValue] forKey:@"fTime4N"];
+    [defaults setFloat:[tfTime5.text floatValue] forKey:@"fTime5N"];
+    
+    [defaults setFloat:[tfTemp1.text floatValue] forKey:@"fTemp1N"];
+    [defaults setFloat:[tfTemp2.text floatValue] forKey:@"fTemp2N"];
+    [defaults setFloat:[tfTemp3.text floatValue] forKey:@"fTemp3N"];
+    [defaults setFloat:[tfTemp4.text floatValue] forKey:@"fTemp4N"];
+    [defaults setFloat:[tfTemp5.text floatValue] forKey:@"fTemp5N"];
+    
+    [defaults synchronize];
+
+}
+
 -(void)dealloc {
 	//This release the decleration we made in the header file
 

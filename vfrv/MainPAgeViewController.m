@@ -1,18 +1,18 @@
 //
-//  savedRecipesTableViewController.m
+//  MainPAgeViewController.m
 //  zaCalc
 //
-//  Created by sholl on 3/31/14.
+//  Created by sholl on 6/1/14.
 //  Copyright (c) 2014 phade2grey. All rights reserved.
 //
 
-#import "savedRecipesTableViewController.h"
+#import "MainPAgeViewController.h"
 
-@interface savedRecipesTableViewController ()
+@interface MainPAgeViewController ()
 
 @end
 
-@implementation savedRecipesTableViewController
+@implementation MainPAgeViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,34 +26,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    //this probably needs to be dynamic below
-    recipes = [[NSArray alloc] initWithObjects:@"Neapolitan",@"New York",@"Chicago Deep-Dish", @"American", @"Cracker",@"Thick",nil];
-    
-    [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
   
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //     quantity, diameter, thickness, hydration, salt, oil, sugar
+    
+    NSArray *recipe1;
+    recipe1 = [[NSMutableArray alloc] init];
+    recipe1 = [NSMutableArray arrayWithObjects:@"Neapolitan",@"2",@"13",@".070",@"62.5",@"3",@"0",@"0",@"1.5",nil];
+    [defaults setObject:recipe1 forKey:@"recipeArray"];
+    
+    NSArray *recipe2;
+    recipe2 = [[NSMutableArray alloc] init];
+    recipe1 = [NSMutableArray arrayWithObjects:@"NY",@"200",@"13",@".070",@"62.5",@"3",@"0",@"0",@"1.5",nil];
+    [defaults setObject:recipe2 forKey:@"recipeArray"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    
+    recipes = [[NSMutableArray alloc] init];
+    recipes = [NSMutableArray arrayWithObjects:recipe1,recipe2,nil];
+    
 
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    //load recipe variables into memory
-    if (self.isMovingFromParentViewController) {
-        
-//do something
-        
-    }
-}
-
-
+    
+    [defaults synchronize];
+    
+   }
 
 - (void)didReceiveMemoryWarning
 {
@@ -66,79 +65,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return 0;
 }
-
-
-
-
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    //One column
-    return 1;
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    //set number of rows
-   /* if ([pickerView tag] == 0) {
-        return sizeof(recipes);
-    } else { return 0; } */
-    return recipes.count;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    //set item per row
-   /* if ([pickerView tag] == 0) {
-        return [recipes objectAtIndex:row];
-    } else {
-        return 0;
-    }
-    */
-    return recipes[row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([pickerView tag] == 0) {
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"selectedRecipe"];
-        
-        [defaults synchronize];
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

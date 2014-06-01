@@ -2279,12 +2279,6 @@ Coming in the next version:
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dp3-FA-sSb">
-                                <rect key="frame" x="216" y="331" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-HD-IyP">
                                 <rect key="frame" x="216" y="202" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2324,13 +2318,6 @@ Coming in the next version:
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preferment Hydration (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-Lo-eAz">
-                                <rect key="frame" x="20" y="334" width="195" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-W6-C2Z">
                                 <rect key="frame" x="138" y="373" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2342,13 +2329,6 @@ Coming in the next version:
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Not used on IDY/ADY Recipes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-Jq-so9">
-                                <rect key="frame" x="32" y="352" width="195" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salt (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZM-Sj-BnP">
@@ -2417,7 +2397,6 @@ Coming in the next version:
                         <outlet property="hydration" destination="Gsj-Zz-QSY" id="UH1-Gy-h2g"/>
                         <outlet property="lDistance" destination="gDL-zi-Ay4" id="Hi5-iL-454"/>
                         <outlet property="oil" destination="3Y9-9q-39E" id="dip-kC-w15"/>
-                        <outlet property="prefermentHydration" destination="Dp3-FA-sSb" id="29p-R1-Ssy"/>
                         <outlet property="quantity" destination="GLZ-xI-4ER" id="ZNP-1l-1Zr"/>
                         <outlet property="recipeName" destination="RCs-W6-C2Z" id="9Av-Yu-C3R"/>
                         <outlet property="salt" destination="t3o-HD-IyP" id="GgY-SL-VbY"/>
@@ -2477,6 +2456,10 @@ Coming in the next version:
                                                     <rect key="frame" x="-11" y="-59" width="320" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <rect key="contentStretch" x="0.0" y="0.49999999999999994" width="1" height="1"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="s2Z-lS-9qb" id="lOh-f9-RbP"/>
+                                                        <outlet property="delegate" destination="s2Z-lS-9qb" id="2Ge-ZW-NRI"/>
+                                                    </connections>
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2488,7 +2471,7 @@ Coming in the next version:
                     </tableView>
                     <navigationItem key="navigationItem" title="Cookbook" id="m8j-pq-J3k"/>
                     <connections>
-                        <outlet property="recipePicker" destination="EEo-3Q-Ufr" id="htm-Jp-lKM"/>
+                        <outlet property="recipePicker" destination="EEo-3Q-Ufr" id="82U-aX-iSr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhg-oF-gQq" userLabel="First Responder" sceneMemberID="firstResponder"/>

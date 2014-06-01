@@ -30,6 +30,16 @@
 
     lDistance.text = distanceS;
     
+    quantity.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"quantityN"]];
+    diameter.text =  [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"diameterN"]];
+    thickness.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"thicknessN"]];
+    hydration.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"hydrationN"]];
+    prefermentAmount.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"prefermentAmountN"]];
+    prefermentHydration.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"prefermentHydrationN"]];
+    salt.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"saltN"]];
+    oil.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"oilN"]];
+    sugar.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"sugarN"]];
+    waste.text = [NSString stringWithFormat:@"%.01f",[defaults floatForKey:@"wasteN"]];
     
 }
 
@@ -77,6 +87,24 @@
     [defaults synchronize];
     
 }
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //save user settings
+    [defaults setFloat:[quantity.text floatValue] forKey:@"quantityN"];
+    [defaults setFloat:[diameter.text floatValue] forKey:@"diameterN"];
+    [defaults setFloat:[thickness.text floatValue] forKey:@"thicknessN"];
+    [defaults setFloat:[hydration.text floatValue] forKey:@"hydrationN"];
+    [defaults setFloat:[prefermentAmount.text floatValue] forKey:@"prefermentAmountN"];
+    
+    [defaults setFloat:[prefermentHydration.text floatValue] forKey:@"prefermentHydrationN"];
+    [defaults setFloat:[salt.text floatValue] forKey:@"saltN"];
+    [defaults setFloat:[oil.text floatValue] forKey:@"oilN"];
+    [defaults setFloat:[sugar.text floatValue] forKey:@"sugarN"];
+    [defaults setFloat:[waste.text floatValue] forKey:@"wasteN"];
+}
+
 
 -(IBAction)closeKeyboard {
 	//Here we are closing the keyboard for both of the textfields.
