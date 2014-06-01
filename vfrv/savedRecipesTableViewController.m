@@ -114,7 +114,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"pickerloaded");
 
+    recipeArray = [defaults objectForKey:@"recipeArray"];
     [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
+    
     [recipePicker reloadAllComponents];
     
     [defaults synchronize];
