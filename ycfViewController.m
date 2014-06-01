@@ -33,7 +33,7 @@
     NSString *sYcf = ycf.text;
     [defaults setFloat:[sYcf floatValue] forKey:@"ycfN"];
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,15 +54,39 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (self.isMovingFromParentViewController) {
+        // Do your stuff here
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *sYcf = ycf.text;
+    [defaults setFloat:[sYcf floatValue] forKey:@"ycfN"];
+    
+    [defaults synchronize];
+    
+    }
+}
+
 /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+ NSString *sYcf = ycf.text;
+ [defaults setFloat:[sYcf floatValue] forKey:@"ycfN"];
+ 
+ [defaults synchronize];
+ 
+
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
 */
 
 @end

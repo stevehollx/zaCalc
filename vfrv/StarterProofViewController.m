@@ -74,7 +74,6 @@
 
     //Correct for yeast correction factor
     starterPercentOutput = starterPercentOutput * [defaults floatForKey:@"ycfN"];
-    NSLog(@"Value of string is %@", [defaults floatForKey:@"ycfN"], starterPercent);
     
 	//Now we are going to display the output in the label.
 	lTotalTime.text = [NSString stringWithFormat:@"%.01f",fOutput];
