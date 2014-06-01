@@ -1,19 +1,18 @@
 //
-//  settingsViewController.m
+//  savedRecipesTableViewController.m
 //  zaCalc
 //
-//  Created by sholl on 2/9/14.
+//  Created by sholl on 3/31/14.
 //  Copyright (c) 2014 phade2grey. All rights reserved.
 //
 
-#import "settingsViewController.h"
-#import "MySingletonClass.h"
+#import "savedRecipesTableViewController.h"
 
-@interface settingsViewController ()
+@interface savedRecipesTableViewController ()
 
 @end
 
-@implementation settingsViewController
+@implementation savedRecipesTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,19 +28,14 @@
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-    weights = [[NSArray alloc] initWithObjects:@"Grams",@"Ounces",@"Cups & Tsp", nil];
-    distances = [[NSArray alloc] initWithObjects:@"Inches",@"Centimeters", nil];
-    temps = [[NSArray alloc] initWithObjects:@"Farenheit",@"Celsius", nil];
+    recipes = [[NSArray alloc] initWithObjects:@"Neapolitan",@"New York",@"Chicago Deep-Dish", @"American", @"Cracker",@"Thick",nil];
     
-    [distancePicker selectRow:[defaults integerForKey:@"prefDistance"] inComponent:0 animated:YES];
-    [tempPicker selectRow:[defaults integerForKey:@"prefTemp"] inComponent:0 animated:YES];
-    [weightPicker selectRow:[defaults integerForKey:@"prefWeight"] inComponent:0 animated:YES];
-    
-    [defaults synchronize];
-    
+    [recipePicker selectRow:[defaults integerForKey:@"recipeSelection"] inComponent:0 animated:YES];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -52,7 +46,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-//picker stuff
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 1;
+}
+
+
+
 
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -65,71 +76,65 @@
 {
     //set number of rows
     if ([pickerView tag] == 0) {
-        return 2;
-    }
-    else if([pickerView tag] == 1)
-    {
-        return 2;
-    }
-    else if([pickerView tag] == 2)
-    {
-        return 3;
-    } else {
-        return 0;
-    }
-    return 0;
+        return sizeof(recipes);
+    } else { return 0; }
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     //set item per row
     if ([pickerView tag] == 0) {
-            return [distances objectAtIndex:row];
-    }
-    else if([pickerView tag] == 1)
-    {
-            return [temps objectAtIndex:row];
-    }
-    else if([pickerView tag] == 2)
-    {
-            return [weights objectAtIndex:row];
+        return [recipes objectAtIndex:row];
     } else {
         return 0;
     }
-    return 0;
     
-
+    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if ([pickerView tag] == 0) {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefDistance"];
+        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"selectedRecipe"];
         [defaults synchronize];
     }
-    else if([pickerView tag] == 1)
-    {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefTemp"];
-        [defaults synchronize];
-    }
-    else if([pickerView tag] == 2)
-    {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefWeight"];
-        [defaults synchronize];
-    }
-
 }
 
 
--(IBAction)closeKeyboard {
-	//Here we are closing the keyboard for both of the textfields.
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -147,8 +152,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
@@ -173,13 +177,12 @@
 /*
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
- */
+*/
 
 @end

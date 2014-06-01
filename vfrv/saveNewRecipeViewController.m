@@ -1,18 +1,18 @@
 //
-//  starterTabBarController.m
+//  saveNewRecipeViewController.m
 //  zaCalc
 //
-//  Created by sholl on 3/30/14.
+//  Created by sholl on 3/31/14.
 //  Copyright (c) 2014 phade2grey. All rights reserved.
 //
 
-#import "starterTabBarController.h"
+#import "saveNewRecipeViewController.h"
 
-@interface starterTabBarController ()
+@interface saveNewRecipeViewController ()
 
 @end
 
-@implementation starterTabBarController
+@implementation saveNewRecipeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.delegate = self;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,14 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tabBarController:(UITabBarController *)starterTabBarController didSelectViewController:(UIViewController *)starterRecipeViewController {
-    
-    //not working- need to define delegates?
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
-        [defaults synchronize];
-
-    
+- (void)saveRecipe {
+   //
 }
 
 /*

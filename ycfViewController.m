@@ -1,18 +1,18 @@
 //
-//  starterTabBarController.m
+//  ycfViewController.m
 //  zaCalc
 //
-//  Created by sholl on 3/30/14.
+//  Created by sholl on 5/31/14.
 //  Copyright (c) 2014 phade2grey. All rights reserved.
 //
 
-#import "starterTabBarController.h"
+#import "ycfViewController.h"
 
-@interface starterTabBarController ()
+@interface ycfViewController ()
 
 @end
 
-@implementation starterTabBarController
+@implementation ycfViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,8 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.delegate = self;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    ycf.text = [NSString stringWithFormat: @"%f", [defaults floatForKey:@"ycfN"]];
+    
+    NSString *sYcf = ycf.text;
+    [defaults setFloat:[sYcf floatValue] forKey:@"ycfN"];
+    
 
 }
 
@@ -37,14 +42,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tabBarController:(UITabBarController *)starterTabBarController didSelectViewController:(UIViewController *)starterRecipeViewController {
-    
-    //not working- need to define delegates?
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
-        [defaults synchronize];
+-(IBAction)closeKeyboard {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *sYcf = ycf.text;
+    [defaults setFloat:[sYcf floatValue] forKey:@"ycfN"];
 
-    
+    [defaults synchronize];
+
+	//Here we are closing the keyboard for both of the tfTimes.
+	[ycf resignFirstResponder];
+
 }
 
 /*

@@ -72,6 +72,9 @@
     +
     fTime5/((((((((((-0.0000336713*(pow(fTemp5,4)))+(0.0105207916*(pow(fTemp5,3))))-(1.2495985607*(pow(fTemp5,2))))+(67.0024722564*fTemp5))-1374.6540546564)*log((.01)))+ (((((-0.000003773*(pow(fTemp5,4))) +( 0.0011788625*(pow(fTemp5,3)))) -( 0.1400139318*(pow(fTemp5,2)))) +( 7.5072379375*fTemp5)) - 154.0188143761))-(((((((-0.0000336713*(pow(fTemp5,4)))+(0.0105207916*(pow(fTemp5,3))))-(1.2495985607*(pow(fTemp5,2))))+(67.0024722564*fTemp5))-1374.6540546564)*log((.4)))+ (((((-0.000003773*(pow(fTemp5,4))) +( 0.0011788625*(pow(fTemp5,3)))) -( 0.1400139318*(pow(fTemp5,2)))) +( 7.5072379375*fTemp5)) - 154.0188143761)))/(log((40))/log(2))))))));
 
+    //Correct for yeast correction factor
+    starterPercentOutput = starterPercentOutput * [defaults floatForKey:@"ycfN"];
+    NSLog(@"Value of string is %@", [defaults floatForKey:@"ycfN"], starterPercent);
     
 	//Now we are going to display the output in the label.
 	lTotalTime.text = [NSString stringWithFormat:@"%.01f",fOutput];
@@ -103,6 +106,7 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 -(void)viewDidLoad {
+    
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
     //MySingletonClass *global = [MySingletonClass sharedSingleton];
@@ -120,6 +124,8 @@
 	//This release the decleration we made in the header file
 
 }
+
+//}
 
 @end
 
