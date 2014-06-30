@@ -136,10 +136,14 @@
         [defaults setFloat:2 forKey:@"prefermentAmountN"];
         [defaults setFloat:100 forKey:@"prefermentHydrationN"];
         [defaults setFloat:3 forKey:@"saltN"];
+        [defaults setFloat:0 forKey:@"sugarN"];
+        [defaults setFloat:0 forKey:@"oilN"];
         [defaults setFloat:63 forKey:@"hydrationN"];
         [defaults setFloat:.070 forKey:@"thicknessN"];
         [defaults setFloat:12 forKey:@"diameterN"];
         [defaults setFloat:1 forKey:@"quantityN"];
+        
+        [defaults setFloat:1.000 forKey:@"ycfN"];
         
         [defaults synchronize];
         
