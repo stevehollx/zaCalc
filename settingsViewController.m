@@ -29,13 +29,15 @@
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-    weights = [[NSArray alloc] initWithObjects:@"Grams",@"Ounces",@"Cups & Tsp", nil];
-    distances = [[NSArray alloc] initWithObjects:@"Inches",@"Centimeters", nil];
-    temps = [[NSArray alloc] initWithObjects:@"Farenheit",@"Celsius", nil];
     
-    [distancePicker selectRow:[defaults integerForKey:@"prefDistance"] inComponent:0 animated:YES];
-    [tempPicker selectRow:[defaults integerForKey:@"prefTemp"] inComponent:0 animated:YES];
-    [weightPicker selectRow:[defaults integerForKey:@"prefWeight"] inComponent:0 animated:YES];
+    if (![defaults objectForKey:@"firstRunSettings"]) {
+        [defaults setObject:[NSDate date] forKey:@"firstRunSettings"];
+        [defaults setInteger:0 forKey:@"prefTemp"];
+        [defaults setInteger:0 forKey:@"prefDistance"];
+        [defaults setInteger:0 forKey:@"prefWeight"];
+        [defaults synchronize];
+        
+    }
     
     [defaults synchronize];
     
@@ -52,78 +54,123 @@
     // Dispose of any resources that can be recreated.
 }
 
-//picker stuff
 
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //One column
-    return 1;
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    //set number of rows
-    if ([pickerView tag] == 0) {
-        return 2;
-    }
-    else if([pickerView tag] == 1)
-    {
-        return 2;
-    }
-    else if([pickerView tag] == 2)
-    {
-        return 3;
-    } else {
-        return 0;
-    }
-    return 0;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    //set item per row
-    if ([pickerView tag] == 0) {
-            return [distances objectAtIndex:row];
-    }
-    else if([pickerView tag] == 1)
-    {
-            return [temps objectAtIndex:row];
-    }
-    else if([pickerView tag] == 2)
-    {
-            return [weights objectAtIndex:row];
-    } else {
-        return 0;
-    }
-    return 0;
-    
-
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSLog(@"row selected");
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([pickerView tag] == 0) {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefDistance"];
-        [defaults synchronize];
-    }
-    else if([pickerView tag] == 1)
-    {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefTemp"];
-        [defaults synchronize];
-    }
-    else if([pickerView tag] == 2)
-    {
-   
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"prefWeight"];
-        [defaults synchronize];
-    }
+    [defaults synchronize];
 
+    int settingDistance = (int)[defaults integerForKey:@"prefDistance"];
+
+    if (indexPath.section == 0)
+    {
+        NSNumber *rowNumber = [NSNumber numberWithUnsignedInt:(int)indexPath.row];
+
+
+        //get selected cell
+        UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+        //if cell isn't currently selected do something
+         if (selectedCell.accessoryType == UITableViewCellAccessoryNone)
+        {
+            //get old selected cell and remove mark on it
+            UITableViewCell *oldSelection = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:settingDistance inSection:0]];
+            oldSelection.accessoryType = UITableViewCellAccessoryNone;
+
+            //mark new cell
+            selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            
+            //set global values
+            [defaults setInteger:indexPath.row forKey:@"prefDistance"];
+            [defaults synchronize];
+            
+            if ( [firstSelectedCellsArray containsObject:rowNumber]  )
+            {
+                [firstSelectedCellsArray removeObject:rowNumber];
+            }
+            else
+            {
+                [firstSelectedCellsArray addObject:rowNumber];
+            }
+        }
+    }
+    
+
+        int settingTemp = (int)[defaults integerForKey:@"prefTemp"];
+   
+        if (indexPath.section == 1)
+        {
+            NSNumber *rowNumber = [NSNumber numberWithUnsignedInt:(int)indexPath.row];
+            
+            
+            //get selected cell
+            UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+            //if cell isn't currently selected do something
+            if (selectedCell.accessoryType == UITableViewCellAccessoryNone)
+            {
+                //get old selected cell and remove mark on it
+                UITableViewCell *oldSelection = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:settingTemp inSection:1]];
+                oldSelection.accessoryType = UITableViewCellAccessoryNone;
+                
+                //mark new cell
+                selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                
+                //set global values
+                [defaults setInteger:indexPath.row forKey:@"prefTemp"];
+                [defaults synchronize];
+                
+                if ( [secondSelectedCellsArray containsObject:rowNumber]  )
+                {
+                    [secondSelectedCellsArray removeObject:rowNumber];
+                }
+                else
+                {
+                    [secondSelectedCellsArray addObject:rowNumber];
+                }
+            }
+
+        }
+
+
+        int settingWeight = (int)[defaults integerForKey:@"prefWeight"];
+            
+            if (indexPath.section == 2)
+            {
+                NSNumber *rowNumber = [NSNumber numberWithUnsignedInt:(int)indexPath.row];
+                
+                
+                //get selected cell
+                UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+                //if cell isn't currently selected do something
+                if (selectedCell.accessoryType == UITableViewCellAccessoryNone)
+                {
+                    //get old selected cell and remove mark on it
+                    UITableViewCell *oldSelection = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:settingWeight inSection:2]];
+                    oldSelection.accessoryType = UITableViewCellAccessoryNone;
+                    
+                    //mark new cell
+                    selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                    
+                    //set global values
+                    [defaults setInteger:indexPath.row forKey:@"prefWeight"];
+                    [defaults synchronize];
+                    
+                    if ( [ThirdSelectedCellsArray containsObject:rowNumber]  )
+                    {
+                        [ThirdSelectedCellsArray removeObject:rowNumber];
+                    }
+                    else
+                    {
+                        [ThirdSelectedCellsArray addObject:rowNumber];
+                    }
+            }
+  
+        
+        }
+        
 }
+
 
 
 -(IBAction)closeKeyboard {

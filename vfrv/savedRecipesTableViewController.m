@@ -69,12 +69,7 @@
    } else {
        recipeArray = [defaults objectForKey:@"recipeArray"];
    }
-    
-    
-        //debugging
-        NSLog(@"Selected Recipe is %d", [defaults integerForKey:@"selectedRecipe"]);
-        NSLog(@"Recipe array on list page is %@", recipeArray);
-         
+             
     //load preselected recipe parameers into memory
     [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
     [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
