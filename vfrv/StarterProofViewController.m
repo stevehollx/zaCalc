@@ -108,7 +108,8 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 -(void)viewDidLoad {
-    
+    originalCenter = self.view.center;
+
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
     //MySingletonClass *global = [MySingletonClass sharedSingleton];
@@ -188,6 +189,27 @@
 }
 
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"Test");
+    if(textField.tag==1 ) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(self->originalCenter.x,self->originalCenter.x-50);
+        [UIView commitAnimations];
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if(textField.tag==1 ) {
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = self->originalCenter;
+        [UIView commitAnimations];
+    }
+}
 
 
 - (void)viewWillDisappear:(BOOL)animated {

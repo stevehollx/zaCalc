@@ -12,6 +12,7 @@
 @implementation starterRecipeViewController
 
 -(IBAction)viewDidLoad {
+    originalCenter = self.view.center;
 
    NSString *distanceS = @"(inches)";
     
@@ -109,6 +110,26 @@
 }
 
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if(textField.tag==1 ) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(self->originalCenter.x,self->originalCenter.x-50);
+        [UIView commitAnimations];
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if(textField.tag==1 ) {
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = self->originalCenter;
+        [UIView commitAnimations];
+    }
+}
 -(IBAction)closeKeyboard {
 	//Here we are closing the keyboard for both of the textfields.
 	[quantity resignFirstResponder];

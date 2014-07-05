@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface starterRecipeViewController : UIViewController {
+@interface starterRecipeViewController : UIViewController<UITextFieldDelegate> {
     IBOutlet UITextField *quantity;
     IBOutlet UITextField *diameter;
     IBOutlet UITextField *thickness;
@@ -20,6 +20,8 @@
     IBOutlet UITextField *sugar;
     IBOutlet UITextField *waste;
     IBOutlet UILabel *lDistance;
+    CGPoint originalCenter;
+
 }
 
 

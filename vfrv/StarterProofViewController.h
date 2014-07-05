@@ -2,7 +2,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StarterProofViewController : UIViewController {
+@interface StarterProofViewController : UIViewController <UITextFieldDelegate>{
 	//Here we are declaring the outlet for the textfields
 	IBOutlet UITextField *tfTime1;
 	IBOutlet UITextField *tfTime2;
@@ -36,6 +36,9 @@
     float fTemp4;
     float fTemp5;
 	float starterPercentOutput;
+    
+    CGPoint originalCenter;
+
 }
 
 

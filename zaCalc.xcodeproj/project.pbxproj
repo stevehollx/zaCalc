@@ -14,7 +14,6 @@
 		FF1415DE18A097E200FE0E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415DD18A097E200FE0E02 /* main.m */; };
 		FF1415E218A097E200FE0E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415E118A097E200FE0E02 /* AppDelegate.m */; };
 		FF1415E518A097E200FE0E02 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1415E318A097E200FE0E02 /* Main_iPhone.storyboard */; };
-		FF1415E818A097E200FE0E02 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */; };
 		FF1415EB18A097E200FE0E02 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415EA18A097E200FE0E02 /* MasterViewController.m */; };
 		FF1415EE18A097E200FE0E02 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1415ED18A097E200FE0E02 /* DetailViewController.m */; };
 		FF1415F018A097E200FE0E02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1415EF18A097E200FE0E02 /* Images.xcassets */; };
@@ -78,7 +77,6 @@
 		FF1415E018A097E200FE0E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF1415E118A097E200FE0E02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF1415E418A097E200FE0E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		FF1415E718A097E200FE0E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		FF1415E918A097E200FE0E02 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		FF1415EA18A097E200FE0E02 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		FF1415EC18A097E200FE0E02 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -361,7 +359,6 @@
 			isa = PBXGroup;
 			children = (
 				FF1415E318A097E200FE0E02 /* Main_iPhone.storyboard */,
-				FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -433,6 +430,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = phade2grey;
 				TargetAttributes = {
+					FF1415CD18A097E200FE0E02 = {
+						DevelopmentTeam = 7BWNGJ3VP6;
+					};
 					FF1415F418A097E200FE0E02 = {
 						TestTargetID = FF1415CD18A097E200FE0E02;
 					};
@@ -467,7 +467,6 @@
 				FF65ED8618D537CF00591398 /* AppIcon76x76.png in Resources */,
 				FF65ED8818D537CF00591398 /* iTunesArtwork.png in Resources */,
 				FF65ED5E18D5330200591398 /* lab-beaker-icon copy.png in Resources */,
-				FF1415E818A097E200FE0E02 /* Main_iPad.storyboard in Resources */,
 				FF65ED8218D537CF00591398 /* AppIcon60x60.png in Resources */,
 				FF1415F018A097E200FE0E02 /* Images.xcassets in Resources */,
 				FF65ED6818D534B500591398 /* list-icon2.png in Resources */,
@@ -555,14 +554,6 @@
 				FF1415E418A097E200FE0E02 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		FF1415E618A097E200FE0E02 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF1415E718A097E200FE0E02 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		FF1415FF18A097E200FE0E02 /* InfoPlist.strings */ = {
@@ -653,10 +644,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vfrv/zaCalc-Prefix.pch";
 				INFOPLIST_FILE = "vfrv/zaCalc-Info.plist";
 				PRODUCT_NAME = zaCalc;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -666,10 +659,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vfrv/zaCalc-Prefix.pch";
 				INFOPLIST_FILE = "vfrv/zaCalc-Info.plist";
 				PRODUCT_NAME = zaCalc;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

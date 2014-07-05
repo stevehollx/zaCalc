@@ -96,6 +96,21 @@
     if(indexPath.section == 0 && indexPath.row==0) {
         [self performSegueWithIdentifier:@"newRecipeSegue" sender:self];
 
+    } else if (indexPath.section == 1 ) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setInteger:indexPath.row forKey:@"selectedRecipe"];
+        
+        //load preselected recipe parameers into memory
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:5] floatValue] forKey:@"saltN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:6] floatValue] forKey:@"oilN"];
+        [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
+        [defaults synchronize];
+        
+
     }
 }
 

@@ -67,20 +67,23 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25];
-    self.view.center = CGPointMake(self->originalCenter.x,self->originalCenter.x-116);
+    if(textField.tag==8 || textField.tag==9 ) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(self->originalCenter.x,self->originalCenter.x-50);
     [UIView commitAnimations];
-    
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25];
-    self.view.center = self->originalCenter;
-    [UIView commitAnimations];
-    
+    if(textField.tag==8 || textField.tag==9 ) {
+
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = self->originalCenter;
+        [UIView commitAnimations];
+    }
 }
 
 
@@ -93,6 +96,8 @@
     [salt resignFirstResponder];
     [sugar resignFirstResponder];
     [recipeName resignFirstResponder];
+    [oil resignFirstResponder];
+
 
 }
 
@@ -104,6 +109,8 @@
     [salt resignFirstResponder];
     [sugar resignFirstResponder];
     [recipeName resignFirstResponder];
+    [oil resignFirstResponder];
+
     return YES;
 }
 
@@ -115,6 +122,8 @@
     [salt resignFirstResponder];
     [sugar resignFirstResponder];
     [recipeName resignFirstResponder];
+    [oil resignFirstResponder];
+
     return YES;
 }
 
