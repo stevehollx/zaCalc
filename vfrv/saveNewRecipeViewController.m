@@ -60,8 +60,6 @@
     [defaults setObject:recipeArray forKey:@"recipeArray"];
     
     [defaults synchronize];
-    NSLog(@"Recipe array in add page is %@", recipeArray);
-
     
     [self.navigationController popViewControllerAnimated:YES]; //simulates pressing back
 

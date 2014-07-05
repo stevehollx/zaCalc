@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+//@interface savedRecipesTableViewController : UITableViewController<UIPickerViewDataSource, UIPickerViewDelegate> {
 
-@interface savedRecipesTableViewController : UITableViewController<UIPickerViewDataSource, UIPickerViewDelegate> {
-    
-    IBOutlet UIPickerView *recipePicker;
-    
-    NSMutableArray *recipeArray;
+@interface savedRecipesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+    //IBOutlet UIPickerView *recipePicker;
 }
+
+@property (strong) NSMutableArray *recipeArray;
 @end

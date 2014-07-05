@@ -47,6 +47,7 @@
 
 //This is a fix for when the tab has loaded and the user switches back to the preferment tab to change, since navigating back to recipe doesn't update values.
 -(void)viewWillAppear:(BOOL)animated {
+
     [super viewWillAppear:animated];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     prefermentAmount.text = [NSString stringWithFormat:@"%.2f",[defaults floatForKey:@"prefermentAmountN"]];

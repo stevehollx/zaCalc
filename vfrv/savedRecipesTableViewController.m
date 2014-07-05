@@ -18,22 +18,27 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _recipeArray = [[defaults objectForKey:@"recipeArray"] mutableCopy];
+
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
     //Load aray at first run an set to NP
     
    if (![defaults objectForKey:@"firstRunRecipe"]) {
         [defaults setObject:[NSDate date] forKey:@"firstRunRecipe"];
     
-        recipeArray  = [[NSMutableArray alloc] init];
+        _recipeArray  = [[NSMutableArray alloc] init];
     
         //set stock recipes
         //     quantity, diameter, thickness, hydration, salt, oil, sugar
@@ -41,145 +46,136 @@
         NSMutableArray *recipe1;
         recipe1 = [[NSMutableArray alloc] init];
         recipe1 = [NSMutableArray arrayWithObjects:@"Neapolitan",@"1",@"13",@".070",@"62.5",@"3",@"0",@"0",nil];
-        [recipeArray insertObject:recipe1 atIndex:recipeArray.count];
+        [_recipeArray insertObject:recipe1 atIndex:_recipeArray.count];
          
         NSMutableArray *recipe2;
         recipe2 = [[NSMutableArray alloc] init];
         recipe2 = [NSMutableArray arrayWithObjects:@"NY",@"1",@"16",@".085",@"60",@"1.5",@"1.0",@"0",nil];
-        [recipeArray insertObject:recipe2 atIndex:recipeArray.count];
+        [_recipeArray insertObject:recipe2 atIndex:_recipeArray.count];
     
        NSMutableArray *recipe3;
        recipe3 = [[NSMutableArray alloc] init];
        recipe3 = [NSMutableArray arrayWithObjects:@"Thin Crust",@"1",@"14",@".085",@"36",@"1.2",@"3.5",@"1.2",nil];
-       [recipeArray insertObject:recipe3 atIndex:recipeArray.count];
+       [_recipeArray insertObject:recipe3 atIndex:_recipeArray.count];
        
        NSMutableArray *recipe4;
        recipe4 = [[NSMutableArray alloc] init];
        recipe4 = [NSMutableArray arrayWithObjects:@"Deep Dish",@"1",@"12",@".135",@"52",@"1",@"15",@"0",nil];
-       [recipeArray insertObject:recipe4 atIndex:recipeArray.count];
+       [_recipeArray insertObject:recipe4 atIndex:_recipeArray.count];
     
        
         [defaults setInteger:0 forKey:@"selectedRecipe"];
-    
+           
         //save recipe array to user def
-        [defaults setObject:recipeArray forKey:@"recipeArray"];
-    
+        [defaults setObject:_recipeArray forKey:@"recipeArray"];
         [defaults synchronize];
-        
+       
    } else {
-       recipeArray = [defaults objectForKey:@"recipeArray"];
-   }
+       _recipeArray = [[defaults objectForKey:@"recipeArray"] mutableCopy];
+     }
              
     //load preselected recipe parameers into memory
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:5] floatValue] forKey:@"saltN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:6] floatValue] forKey:@"oilN"];
-    [defaults setFloat:[[[recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
-/*
-    [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
-    [recipePicker reloadAllComponents];
-
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:5] floatValue] forKey:@"saltN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:6] floatValue] forKey:@"oilN"];
+    [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
     [defaults synchronize];
-  */
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
 
-
-- (void)viewDidAppear:(BOOL)animated {
-    [self loadPicker];
+    [self.tableView reloadData];
+    
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 }
 
-- (void)loadPicker {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"pickerloaded");
-
-    recipeArray = [defaults objectForKey:@"recipeArray"];
-    [recipePicker selectRow:[defaults integerForKey:@"selectedRecipe"] inComponent:0 animated:YES];
-    
-    [recipePicker reloadAllComponents];
-    
-    [defaults synchronize];
-}
-
-- (void)didReceiveMemoryWarning
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    if(indexPath.section == 0 && indexPath.row==0) {
+        [self performSegueWithIdentifier:@"newRecipeSegue" sender:self];
+
+    }
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return 1;
-}
-
-
-
-
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    //One column
-    return 1;
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    //set number of rows
-   /* if ([pickerView tag] == 0) {
-        return sizeof(recipes);
-    } else { return 0; } */
-    return recipeArray.count;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    //set item per row
-   /* if ([pickerView tag] == 0) {
-        return [recipes objectAtIndex:row];
-    } else {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if(section == 0) {
+        return 1;
+    }
+    
+    else if(section == 1) {
+        return _recipeArray.count;
+    }
+    
+    else { // do nothing
         return 0;
     }
-    */
-    return recipeArray[row][0];
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([pickerView tag] == 0) {
-        [defaults setInteger:[pickerView selectedRowInComponent:0] forKey:@"selectedRecipe"];
-        
-        //load selected recipe parameers into memory
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:2] floatValue] forKey:@"diameterN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:3] floatValue] forKey:@"thicknessN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:4] floatValue] forKey:@"hydrationN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:5] floatValue] forKey:@"saltN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:6] floatValue] forKey:@"oilN"];
-        [defaults setFloat:[[[recipeArray objectAtIndex:[pickerView selectedRowInComponent:0]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
-        
-        [defaults synchronize];
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"Customize", @"Customize");
+            break;
+        case 1:
+            sectionName = NSLocalizedString(@"Recipe Book", @"Recipe Book");
+            break;
+            // ...
+        default:
+            sectionName = @"";
+            break;
     }
+    return sectionName;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    if (indexPath.section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        cell.textLabel.text = @"Add a New Recipe";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }
+    
+    if (indexPath.section == 1) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+
+        NSMutableArray *recipe = [self.recipeArray objectAtIndex:indexPath.row];
+
+        cell.textLabel.text = [recipe objectAtIndex:0];
+        return cell;
+    }
+    else {
+        return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+
+    }
+    
+}
+
+
+
+ 
+
+
+
 
 
 /*
@@ -193,27 +189,41 @@
 }
 */
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if(indexPath.section == 0){ return NO; } else return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        
+        //remove item from data source
+        [_recipeArray removeObjectAtIndex:(int)indexPath.row];
+        
+        //save recipe array to user def
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        [defaults setObject:_recipeArray forKey:@"recipeArray"];
+        [defaults synchronize];
+        
+        //remove from tableview
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
+
+
+
+
 
 /*
 // Override to support rearranging the table view.
