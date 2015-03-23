@@ -12,7 +12,8 @@
 
 @interface savedRecipesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     //IBOutlet UIPickerView *recipePicker;
-}
 
+}
 @property (strong) NSMutableArray *recipeArray;
+
 @end

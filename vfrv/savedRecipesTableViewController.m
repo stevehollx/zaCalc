@@ -65,7 +65,8 @@
     
        
         [defaults setInteger:0 forKey:@"selectedRecipe"];
-           
+  
+       
         //save recipe array to user def
         [defaults setObject:_recipeArray forKey:@"recipeArray"];
         [defaults synchronize];
@@ -92,13 +93,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+// xxxxxxx Need to fix unchecking of old index, or unchecking all in array
+    
     if(indexPath.section == 0 && indexPath.row==0) {
         [self performSegueWithIdentifier:@"newRecipeSegue" sender:self];
 
     } else if (indexPath.section == 1 ) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setInteger:indexPath.row forKey:@"selectedRecipe"];
+        
+        //clear all current checkmarks
+        for (UITableViewCell *cell in [tableView visibleCells]) {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+
+        if (newCell.accessoryType == UITableViewCellAccessoryNone) {
+            newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            [defaults setInteger:indexPath.row forKey:@"selectedRecipe"];
+            // Reflect selection in data model
+        } else if (newCell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            newCell.accessoryType = UITableViewCellAccessoryNone;
+            // Reflect deselection in data model
+        }
+
         
         //load preselected recipe parameers into memory
         [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:1] floatValue] forKey:@"quantityN"];
@@ -109,12 +126,11 @@
         [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:6] floatValue] forKey:@"oilN"];
         [defaults setFloat:[[[_recipeArray objectAtIndex:[defaults integerForKey:@"selectedRecipe"]] objectAtIndex:7] floatValue] forKey:@"sugarN"];
         [defaults synchronize];
-        
+
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
 
     }
 }
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -176,6 +192,11 @@
         NSMutableArray *recipe = [self.recipeArray objectAtIndex:indexPath.row];
 
         cell.textLabel.text = [recipe objectAtIndex:0];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        if(indexPath.row == [defaults integerForKey:@"selectedRecipe"]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
         return cell;
     }
     else {
