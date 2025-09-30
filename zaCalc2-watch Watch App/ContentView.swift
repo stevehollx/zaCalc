@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  zaCalc2
+//  zaCalc2-watch Watch App
 //
-//  Created by sholl on 9/27/25.
+//  Created by sholl on 9/29/25.
 //
 
 import SwiftUI
