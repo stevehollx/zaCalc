@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  zaCalc2-watch Watch App
+//  zaCalc2 Watch App
 //
 //  Created by sholl on 9/29/25.
 //
@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var calculatorData: CalculatorData
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            WatchResultsView()
+                .environmentObject(calculatorData)
+
+            WatchToppingsView()
+                .environmentObject(calculatorData)
         }
-        .padding()
+        .tabViewStyle(.page)
     }
 }
 

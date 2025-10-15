@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'zaCalc2' in project 'zaCalc2'
+➜ Explicit dependency on target 'zaCalc2-watch Watch App' in project 'zaCalc2'
+Target 'zaCalc2-watch Watch App' in project 'zaCalc2' (no dependencies)

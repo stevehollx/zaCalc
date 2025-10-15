@@ -1,0 +1,49 @@
+{
+  "" : {
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2-watch Watch App-primary.dia",
+    "emit-module-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2-watch Watch App-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2-watch Watch App-primary-emit-module.dia",
+    "pch" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2-watch Watch App-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2-watch Watch App-primary.swiftdeps"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/zaCalc2-watch Watch App/CalculatorData.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/CalculatorData~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/zaCalc2-watch Watch App/ContentView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/zaCalc2-watch Watch App/WatchResultsView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/WatchResultsView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/zaCalc2-watch Watch App/zaCalc2_Watch_AppApp.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug-watchos/zaCalc2-watch Watch App.build/Objects-normal/arm64/zaCalc2_Watch_AppApp~partial.swiftmodule"
+  }
+}

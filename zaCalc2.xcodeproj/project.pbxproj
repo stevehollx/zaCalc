@@ -6,14 +6,104 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FF5364CA2E8C154D00861764 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5364C92E8C154D00861764 /* WatchConnectivityManager.swift */; };
+		FFE454B92E88D328006DF4E2 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454B82E88D31E006DF4E2 /* App.swift */; };
+		FFE454BB2E88D385006DF4E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454BA2E88D37F006DF4E2 /* ContentView.swift */; };
+		FFE454BD2E88D3A6006DF4E2 /* CalculatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454BC2E88D39E006DF4E2 /* CalculatorData.swift */; };
+		FFE454BF2E88D3C2006DF4E2 /* RecipeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454BE2E88D3BB006DF4E2 /* RecipeInputView.swift */; };
+		FFE454C12E88D3D6006DF4E2 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454C02E88D3D4006DF4E2 /* OutputView.swift */; };
+		FFE454C32E88D400006DF4E2 /* SourdoughCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454C22E88D3FE006DF4E2 /* SourdoughCalculatorView.swift */; };
+		FFE454C52E88D450006DF4E2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454C42E88D44E006DF4E2 /* SettingsView.swift */; };
+		FFE454C72E88D500006DF4E2 /* BakersYeastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454C62E88D4FE006DF4E2 /* BakersYeastView.swift */; };
+		FFE454C92E88D600006DF4E2 /* ToppingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454CA2E88D5FE006DF4E2 /* ToppingsView.swift */; };
+		FFE454CB2E88D700006DF4E2 /* AutoSelectTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454CC2E88D701006DF4E2 /* AutoSelectTextField.swift */; };
+		FFE454CD2E88D800006DF4E2 /* AutoSelectTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE454CE2E88D801006DF4E2 /* AutoSelectTextView.swift */; };
+		FFE4554A2E8B1926006DF4E2 /* zaCalc2-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FFE4552A2E8B1924006DF4E2 /* zaCalc2-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFE455372E8B1926006DF4E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFE454A02E88D2AF006DF4E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE455292E8B1924006DF4E2;
+			remoteInfo = "zaCalc2-watch Watch App";
+		};
+		FFE455412E8B1926006DF4E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFE454A02E88D2AF006DF4E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE455292E8B1924006DF4E2;
+			remoteInfo = "zaCalc2-watch Watch App";
+		};
+		FFE455482E8B1926006DF4E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFE454A02E88D2AF006DF4E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE455292E8B1924006DF4E2;
+			remoteInfo = "zaCalc2-watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFE455182E8B1821006DF4E2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FFE4554A2E8B1926006DF4E2 /* zaCalc2-watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FF5364C92E8C154D00861764 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		FFE454A82E88D2AF006DF4E2 /* zaCalc2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zaCalc2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE454B82E88D31E006DF4E2 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		FFE454BA2E88D37F006DF4E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFE454BC2E88D39E006DF4E2 /* CalculatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorData.swift; sourceTree = "<group>"; };
+		FFE454BE2E88D3BB006DF4E2 /* RecipeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInputView.swift; sourceTree = "<group>"; };
+		FFE454C02E88D3D4006DF4E2 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		FFE454C22E88D3FE006DF4E2 /* SourdoughCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourdoughCalculatorView.swift; sourceTree = "<group>"; };
+		FFE454C42E88D44E006DF4E2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FFE454C62E88D4FE006DF4E2 /* BakersYeastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakersYeastView.swift; sourceTree = "<group>"; };
+		FFE454C82E88D50C006DF4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE454CA2E88D5FE006DF4E2 /* ToppingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingsView.swift; sourceTree = "<group>"; };
+		FFE454CC2E88D701006DF4E2 /* AutoSelectTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSelectTextField.swift; sourceTree = "<group>"; };
+		FFE454CE2E88D801006DF4E2 /* AutoSelectTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSelectTextView.swift; sourceTree = "<group>"; };
+		FFE4552A2E8B1924006DF4E2 /* zaCalc2-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zaCalc2-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE455362E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zaCalc2-watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE455402E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zaCalc2-watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF5364CD2E8C1EC500861764 /* Screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		FFE454AA2E88D2AF006DF4E2 /* zaCalc2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = zaCalc2;
+			sourceTree = "<group>";
+		};
+		FFE4552B2E8B1924006DF4E2 /* zaCalc2-watch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zaCalc2-watch Watch App";
+			sourceTree = "<group>";
+		};
+		FFE455392E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zaCalc2-watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FFE455432E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zaCalc2-watch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,14 +116,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFE455272E8B1924006DF4E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE455332E8B1926006DF4E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4553D2E8B1926006DF4E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FFE4549F2E88D2AF006DF4E2 = {
 			isa = PBXGroup;
 			children = (
+				FF5364CD2E8C1EC500861764 /* Screenshots */,
+				FF5364C92E8C154D00861764 /* WatchConnectivityManager.swift */,
+				FFE454C82E88D50C006DF4E2 /* Info.plist */,
+				FFE454C62E88D4FE006DF4E2 /* BakersYeastView.swift */,
+				FFE454C42E88D44E006DF4E2 /* SettingsView.swift */,
+				FFE454C22E88D3FE006DF4E2 /* SourdoughCalculatorView.swift */,
+				FFE454C02E88D3D4006DF4E2 /* OutputView.swift */,
+				FFE454BE2E88D3BB006DF4E2 /* RecipeInputView.swift */,
+				FFE454BC2E88D39E006DF4E2 /* CalculatorData.swift */,
+				FFE454BA2E88D37F006DF4E2 /* ContentView.swift */,
+				FFE454B82E88D31E006DF4E2 /* App.swift */,
+				FFE454B72E88D2F0006DF4E2 /* Views */,
+				FFE454B62E88D2E5006DF4E2 /* Models */,
 				FFE454AA2E88D2AF006DF4E2 /* zaCalc2 */,
+				FFE4552B2E8B1924006DF4E2 /* zaCalc2-watch Watch App */,
+				FFE455392E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests */,
+				FFE455432E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests */,
 				FFE454A92E88D2AF006DF4E2 /* Products */,
+				FFE454F02E8961BF006DF4E2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +169,35 @@
 			isa = PBXGroup;
 			children = (
 				FFE454A82E88D2AF006DF4E2 /* zaCalc2.app */,
+				FFE4552A2E8B1924006DF4E2 /* zaCalc2-watch Watch App.app */,
+				FFE455362E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests.xctest */,
+				FFE455402E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FFE454B62E88D2E5006DF4E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFE454B72E88D2F0006DF4E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFE454F02E8961BF006DF4E2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FFE454CA2E88D5FE006DF4E2 /* ToppingsView.swift */,
+				FFE454CC2E88D701006DF4E2 /* AutoSelectTextField.swift */,
+				FFE454CE2E88D801006DF4E2 /* AutoSelectTextView.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,12 +210,15 @@
 				FFE454A42E88D2AF006DF4E2 /* Sources */,
 				FFE454A52E88D2AF006DF4E2 /* Frameworks */,
 				FFE454A62E88D2AF006DF4E2 /* Resources */,
+				FFE455182E8B1821006DF4E2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFE455492E8B1926006DF4E2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				FF5364CD2E8C1EC500861764 /* Screenshots */,
 				FFE454AA2E88D2AF006DF4E2 /* zaCalc2 */,
 			);
 			name = zaCalc2;
@@ -69,6 +227,74 @@
 			productName = zaCalc2;
 			productReference = FFE454A82E88D2AF006DF4E2 /* zaCalc2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FFE455292E8B1924006DF4E2 /* zaCalc2-watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE4554B2E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch App" */;
+			buildPhases = (
+				FFE455262E8B1924006DF4E2 /* Sources */,
+				FFE455272E8B1924006DF4E2 /* Frameworks */,
+				FFE455282E8B1924006DF4E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FFE4552B2E8B1924006DF4E2 /* zaCalc2-watch Watch App */,
+			);
+			name = "zaCalc2-watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "zaCalc2-watch Watch App";
+			productReference = FFE4552A2E8B1924006DF4E2 /* zaCalc2-watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFE455352E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE4554E2E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch AppTests" */;
+			buildPhases = (
+				FFE455322E8B1926006DF4E2 /* Sources */,
+				FFE455332E8B1926006DF4E2 /* Frameworks */,
+				FFE455342E8B1926006DF4E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFE455382E8B1926006DF4E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFE455392E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests */,
+			);
+			name = "zaCalc2-watch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "zaCalc2-watch Watch AppTests";
+			productReference = FFE455362E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFE4553F2E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE455512E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch AppUITests" */;
+			buildPhases = (
+				FFE4553C2E8B1926006DF4E2 /* Sources */,
+				FFE4553D2E8B1926006DF4E2 /* Frameworks */,
+				FFE4553E2E8B1926006DF4E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFE455422E8B1926006DF4E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFE455432E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests */,
+			);
+			name = "zaCalc2-watch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "zaCalc2-watch Watch AppUITests";
+			productReference = FFE455402E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -82,6 +308,18 @@
 				TargetAttributes = {
 					FFE454A72E88D2AF006DF4E2 = {
 						CreatedOnToolsVersion = 26.0.1;
+						LastSwiftMigration = 2600;
+					};
+					FFE455292E8B1924006DF4E2 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					FFE455352E8B1926006DF4E2 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = FFE455292E8B1924006DF4E2;
+					};
+					FFE4553F2E8B1926006DF4E2 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = FFE455292E8B1924006DF4E2;
 					};
 				};
 			};
@@ -100,12 +338,36 @@
 			projectRoot = "";
 			targets = (
 				FFE454A72E88D2AF006DF4E2 /* zaCalc2 */,
+				FFE455292E8B1924006DF4E2 /* zaCalc2-watch Watch App */,
+				FFE455352E8B1926006DF4E2 /* zaCalc2-watch Watch AppTests */,
+				FFE4553F2E8B1926006DF4E2 /* zaCalc2-watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FFE454A62E88D2AF006DF4E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE455282E8B1924006DF4E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE455342E8B1926006DF4E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4553E2E8B1926006DF4E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,10 +381,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE454C12E88D3D6006DF4E2 /* OutputView.swift in Sources */,
+				FFE454BB2E88D385006DF4E2 /* ContentView.swift in Sources */,
+				FFE454BD2E88D3A6006DF4E2 /* CalculatorData.swift in Sources */,
+				FFE454B92E88D328006DF4E2 /* App.swift in Sources */,
+				FFE454BF2E88D3C2006DF4E2 /* RecipeInputView.swift in Sources */,
+				FFE454C32E88D400006DF4E2 /* SourdoughCalculatorView.swift in Sources */,
+				FFE454C52E88D450006DF4E2 /* SettingsView.swift in Sources */,
+				FFE454C72E88D500006DF4E2 /* BakersYeastView.swift in Sources */,
+				FFE454C92E88D600006DF4E2 /* ToppingsView.swift in Sources */,
+				FFE454CB2E88D700006DF4E2 /* AutoSelectTextField.swift in Sources */,
+				FF5364CA2E8C154D00861764 /* WatchConnectivityManager.swift in Sources */,
+				FFE454CD2E88D800006DF4E2 /* AutoSelectTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE455262E8B1924006DF4E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE455322E8B1926006DF4E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4553C2E8B1926006DF4E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFE455382E8B1926006DF4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE455292E8B1924006DF4E2 /* zaCalc2-watch Watch App */;
+			targetProxy = FFE455372E8B1926006DF4E2 /* PBXContainerItemProxy */;
+		};
+		FFE455422E8B1926006DF4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE455292E8B1924006DF4E2 /* zaCalc2-watch Watch App */;
+			targetProxy = FFE455412E8B1926006DF4E2 /* PBXContainerItemProxy */;
+		};
+		FFE455492E8B1926006DF4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE455292E8B1924006DF4E2 /* zaCalc2-watch Watch App */;
+			targetProxy = FFE455482E8B1926006DF4E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FFE454B12E88D2B0006DF4E2 /* Debug */ = {
@@ -246,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
@@ -253,7 +567,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -264,12 +578,58 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl.zaCalc2";
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		FFE454B52E88D2B0006DF4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				INFOPLIST_FILE = Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -283,9 +643,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 26.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		FFE454B52E88D2B0006DF4E2 /* Release */ = {
+		FFE4554C2E8B1926006DF4E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -293,39 +653,154 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "zaCalc2-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "zaCalc-p2g-sholl";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl.zaCalc2";
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 26.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		FFE4554D2E8B1926006DF4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "zaCalc2-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "zaCalc-p2g-sholl";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		FFE4554F2E8B1926006DF4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl2-watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zaCalc2-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zaCalc2-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		FFE455502E8B1926006DF4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl2-watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zaCalc2-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zaCalc2-watch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		FFE455522E8B1926006DF4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl2-watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "zaCalc2-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		FFE455532E8B1926006DF4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BWNGJ3VP6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zaCalc-p2g-sholl2-watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "zaCalc2-watch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -346,6 +821,33 @@
 			buildConfigurations = (
 				FFE454B42E88D2B0006DF4E2 /* Debug */,
 				FFE454B52E88D2B0006DF4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE4554B2E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4554C2E8B1926006DF4E2 /* Debug */,
+				FFE4554D2E8B1926006DF4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE4554E2E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4554F2E8B1926006DF4E2 /* Debug */,
+				FFE455502E8B1926006DF4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE455512E8B1926006DF4E2 /* Build configuration list for PBXNativeTarget "zaCalc2-watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE455522E8B1926006DF4E2 /* Debug */,
+				FFE455532E8B1926006DF4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

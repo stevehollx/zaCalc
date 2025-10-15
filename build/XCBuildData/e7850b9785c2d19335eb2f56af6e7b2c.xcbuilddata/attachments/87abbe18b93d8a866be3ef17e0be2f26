@@ -1,0 +1,109 @@
+{
+  "" : {
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/zaCalc2-primary.dia",
+    "emit-module-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/zaCalc2-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/zaCalc2-primary-emit-module.dia",
+    "pch" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/zaCalc2-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/zaCalc2-primary.swiftdeps"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/App.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/App~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/BakersYeastView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/BakersYeastView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/CalculatorData.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/CalculatorData~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/ContentView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/OutputView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/OutputView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/RecipeInputView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/RecipeInputView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/SettingsView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/SourdoughCalculatorView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/SourdoughCalculatorView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/ToppingsView.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/ToppingsView~partial.swiftmodule"
+  },
+  "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/sholl/Documents/zaCalc2/zaCalc2/build/zaCalc2.build/Debug/zaCalc2.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
