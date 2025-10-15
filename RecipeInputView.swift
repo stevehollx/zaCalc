@@ -16,6 +16,7 @@ struct RecipeInputView: View {
     @State private var showingSaveSheet = false
     @State private var showingLoadSheet = false
     @State private var recipeName = ""
+    @State private var previousBakersYeastType: CalculatorData.BakersYeastType?
 
     enum Field: Hashable {
         case quantity, diameter, thickness, hydration, prefermentAmount, prefermentHydration, salt, oil, sugar, waste, bakersYeastPercentage
@@ -141,7 +142,17 @@ struct RecipeInputView: View {
                             }
                         }
                         .pickerStyle(.segmented)
-                        .onChange(of: calculatorData.bakersYeastType) { _ in
+                        .onChange(of: calculatorData.bakersYeastType) { newType in
+                            // Convert the yeast percentage when changing types
+                            if let previousType = previousBakersYeastType {
+                                let convertedAmount = calculatorData.convertYeastAmount(
+                                    from: previousType,
+                                    to: newType,
+                                    amount: calculatorData.bakersYeastPercentage
+                                )
+                                calculatorData.bakersYeastPercentage = convertedAmount
+                            }
+                            previousBakersYeastType = newType
                             calculatorData.saveToDefaults()
                         }
                     }
@@ -319,6 +330,10 @@ struct RecipeInputView: View {
             .onChange(of: calculatorData.bakersYeastPercentage) { _ in
                 calculatorData.saveToDefaults()
                 WatchConnectivityManager.shared.sendCalculatorData(calculatorData)
+            }
+            .onAppear {
+                // Initialize the previous yeast type when view appears
+                previousBakersYeastType = calculatorData.bakersYeastType
             }
     }
 }

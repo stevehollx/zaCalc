@@ -139,23 +139,6 @@ struct BakersYeastView: View {
                     }
                 }
 
-                Section("Calculated Amount") {
-                    HStack {
-                        Text("Baker's Yeast Amount")
-                            .font(.headline)
-                        Spacer()
-                        HStack(spacing: 4) {
-                            Text(String(format: "%.2f", calculatorData.bakersYeastAmount))
-                                .font(.title2)
-                                .foregroundColor(.primary)
-                            Text(calculatorData.useOunces ? "oz" : "g")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                    .padding(.vertical, 4)
-                }
-
             }
             .navigationTitle("Baker's Yeast")
             .background(

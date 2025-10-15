@@ -65,6 +65,9 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             if let useOunces = dictionary["useOunces"] as? Bool {
                 self.calculatorData.useOunces = useOunces
             }
+            if let useCelsius = dictionary["useCelsius"] as? Bool {
+                self.calculatorData.useCelsius = useCelsius
+            }
             if let yeastTypeString = dictionary["yeastType"] as? String,
                let yeastType = CalculatorData.YeastType(rawValue: yeastTypeString) {
                 self.calculatorData.yeastType = yeastType
@@ -106,31 +109,24 @@ class WatchConnectivityManager: NSObject, ObservableObject {
 
 extension WatchConnectivityManager: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if let error = error {
-            print("WCSession activation failed: \(error.localizedDescription)")
-        } else {
-            print("WCSession activated with state: \(activationState.rawValue)")
-        }
+        // Session activation completed
     }
 
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("WCSession became inactive")
+        // Session became inactive
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
-        print("WCSession deactivated")
         session.activate()
     }
     #endif
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("Watch received message from iPhone")
         updateCalculatorData(from: message)
     }
 
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print("Watch received user info from iPhone")
         updateCalculatorData(from: userInfo)
     }
 }

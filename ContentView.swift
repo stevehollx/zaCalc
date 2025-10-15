@@ -18,14 +18,14 @@ struct ContentView: View {
                 if calculatorData.yeastType == .sourdough {
                     SourdoughCalculatorView(selectedTab: $selectedTab)
                         .tabItem {
-                            Image(systemName: "leaf")
+                            Image(systemName: "flask.fill")
                             Text("Sourdough")
                         }
                         .tag(0)
                 } else {
                     BakersYeastView(selectedTab: $selectedTab)
                         .tabItem {
-                            Image(systemName: "leaf")
+                            Image(systemName: "allergens")
                             Text("Baker's Yeast")
                         }
                         .tag(0)
@@ -89,7 +89,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("zaCalc")
+            .navigationTitle("zaCalc2")
             .navigationBarTitleDisplayMode(.inline)
         }
         .navigationViewStyle(.stack)

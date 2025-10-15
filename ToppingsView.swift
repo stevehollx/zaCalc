@@ -49,7 +49,7 @@ struct ToppingsView: View {
                             }
                         )
                         .frame(width: 80)
-                        Text("in")
+                        Text(calculatorData.useCentimeters ? "cm" : "in")
                             .foregroundColor(.secondary)
                     }
                 }
@@ -82,7 +82,9 @@ struct ToppingsView: View {
                     } header: {
                         Text("Calculated Toppings")
                     } footer: {
-                        Text("Weights are per pizza. Scaled from \(String(format: "%.1f", style.referenceSize))\" to \(String(format: "%.1f", calculatorData.toppingsSize))\" pizza.")
+                        let unit = calculatorData.useCentimeters ? "cm" : "\""
+                        let refSize = calculatorData.useCentimeters ? style.referenceSize * 2.54 : style.referenceSize
+                        return Text("Weights are per pizza. Scaled from \(String(format: "%.1f", refSize))\(unit) to \(String(format: "%.1f", calculatorData.toppingsSize))\(unit) pizza.")
                     }
                 }
             }
@@ -162,16 +164,65 @@ struct ToppingRow: View {
     let topping: CalculatorData.Topping
     let scaledAmount: Double
 
+    @EnvironmentObject var calculatorData: CalculatorData
+
+    var convertedValue: Double {
+        // Only convert if useOunces is enabled and the unit is grams
+        if calculatorData.useOunces && topping.unit == "g" {
+            // Convert grams to ounces (1 oz = 28.3495 g)
+            return scaledAmount / 28.3495
+        }
+        return scaledAmount
+    }
+
+    var displayUnit: String {
+        // Convert unit label if useOunces is enabled and the unit is grams
+        if calculatorData.useOunces && topping.unit == "g" {
+            return "oz"
+        }
+        return topping.unit
+    }
+
+    var displayText: String {
+        let converted = convertedValue
+
+        // For weights in ounces > 16 oz, show as lb/oz format
+        if calculatorData.useOunces && topping.unit == "g" && converted > 16 {
+            let pounds = Int(converted / 16)
+            let ounces = converted.truncatingRemainder(dividingBy: 16)
+            if ounces < 0.1 {
+                return "\(pounds) lb"
+            } else {
+                return String(format: "\(pounds) lb %.1f oz", ounces)
+            }
+        }
+
+        return String(format: "%.1f", converted)
+    }
+
+    var displayUnitText: String {
+        let converted = convertedValue
+
+        // For lb/oz format, don't show unit (already included in displayText)
+        if calculatorData.useOunces && topping.unit == "g" && converted > 16 {
+            return ""
+        }
+
+        return displayUnit
+    }
+
     var body: some View {
         HStack {
             Text(topping.name)
             Spacer()
             HStack(spacing: 4) {
-                Text(String(format: "%.1f", scaledAmount))
+                Text(displayText)
                     .font(.headline)
-                Text(topping.unit)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                if !displayUnitText.isEmpty {
+                    Text(displayUnitText)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             }
         }
     }
@@ -263,6 +314,7 @@ struct PizzaStyleEditorView: View {
     let onSave: (CalculatorData.CustomPizzaStyle) -> Void
     @Environment(\.presentationMode) var presentationMode
     @FocusState private var focusedField: StyleField?
+    @EnvironmentObject var calculatorData: CalculatorData
 
     enum StyleField: Hashable {
         case styleName, referenceSize
@@ -299,7 +351,7 @@ struct PizzaStyleEditorView: View {
                             }
                         )
                         .frame(width: 80)
-                        Text("in")
+                        Text(calculatorData.useCentimeters ? "cm" : "in")
                             .foregroundColor(.secondary)
                     }
                 }

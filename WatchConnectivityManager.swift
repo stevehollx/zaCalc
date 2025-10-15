@@ -31,8 +31,9 @@ class WatchConnectivityManager: NSObject, ObservableObject {
 
         let message = createDataDictionary(from: data)
 
-        WCSession.default.sendMessage(message, replyHandler: nil) { error in
-            print("Error sending message: \(error.localizedDescription)")
+        WCSession.default.sendMessage(message, replyHandler: { _ in
+            // Message sent successfully
+        }) { _ in
             // Fallback to transferUserInfo
             self.transferCalculatorData(data)
         }
@@ -59,6 +60,7 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             "waste": data.waste,
             "useCentimeters": data.useCentimeters,
             "useOunces": data.useOunces,
+            "useCelsius": data.useCelsius,
             "yeastType": data.yeastType.rawValue,
             "pizzaStyle": data.pizzaStyle.rawValue,
             "bakersYeastPercentage": data.bakersYeastPercentage,
@@ -95,24 +97,20 @@ class WatchConnectivityManager: NSObject, ObservableObject {
 
 extension WatchConnectivityManager: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if let error = error {
-            print("WCSession activation failed: \(error.localizedDescription)")
-        }
+        // Session activation completed
     }
 
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("WCSession became inactive")
+        // Session became inactive
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
-        print("WCSession deactivated")
         session.activate()
     }
     #endif
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         // Handle messages from watch if needed
-        print("Received message from watch: \(message)")
     }
 }

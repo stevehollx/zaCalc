@@ -57,11 +57,11 @@ class CalculatorData: ObservableObject {
         var displayName: String {
             switch self {
             case .instantDry:
-                return "Instant Dry Yeast"
+                return "Instant Dry"
             case .activeDry:
-                return "Active Dry Yeast"
+                return "Active"
             case .cake:
-                return "Cake Yeast"
+                return "Cake"
             }
         }
 
